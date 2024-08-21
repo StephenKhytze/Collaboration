@@ -1,0 +1,43 @@
+.btn {
+    position: relative;
+    display: inline-block;
+    color: $clr-light;
+    padding: 1.75rem 2.75rem;
+    border-radius: 5rem;
+    font-size: 1.5rem;
+    overflow: hidden;
+    z-index: 1;
+    transition: all 0.5s ease;
+}
+.--left {
+    &::before, &::after {
+        content: "";   
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 100%;
+        border-radius: 10rem;
+       }
+       &::after {
+           opacity: 1;
+           width: 100%;
+           background: $clr-red;
+           transition: all 0.5s ease;
+           z-index: -2;
+       }
+       &::before {
+           width: 0%;
+           background: $clr-dark;
+           transition: all 0.5s ease;
+           z-index: -1;
+       }
+       &:hover {
+        color: $clr-red;
+           &::after {
+                opacity: 0;
+        }
+           &::before {
+               width: 100%;
+           }
+       }
+}

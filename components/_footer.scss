@@ -1,0 +1,278 @@
+.footer {
+    background-image: url(/img/home/footer_bg_1.jpg);
+    background-size: cover;
+    background-position: center;
+    color: $clr-light;
+    height: 100%;
+    &_wrapper {
+        @include centerAll;
+        max-width: 125rem;
+        padding: 4rem 0;
+        margin: 0 auto;
+    }
+    &_content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 7rem 4rem;
+        width: 100%;
+        .subscription {
+            display: flex;
+            flex-direction: column;
+            &_separator {
+                display: block;
+                width: 1px;
+                height: 9rem;
+                background: gray;
+            }
+            .branding {
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 6rem;
+                img {
+                    width: 15rem;
+                }
+            }
+            &_text {
+                h1 {
+                    font-size: 3.55rem;
+                    margin: 2rem 0;
+                }
+            }
+            .email_section {
+                display: flex;
+                flex-direction: column;
+                margin: 4rem 0;
+                input {
+                    align-items: center;
+                    font-size: 1.5rem;
+                    padding: 1.5rem 2.5rem;
+                    border-radius: 10rem;
+                    max-width: 26rem;
+                }
+                a {
+                    max-width: max-content;
+                    padding-left: 3.5rem;
+                    background: $clr-red;
+                    margin: 4rem 0;
+                }
+            }
+        }
+        .footer_separator {
+            display: block;
+            width: 110%;
+            height: 1px;
+            background: gray;
+            margin: 3rem 0;
+            margin-bottom: 10rem;
+        }
+        .footer_nav { 
+            h1 {
+                font-size: 2.25rem;
+            }
+            .title_underline {
+                display: block;
+                margin: 0.75rem 0;
+                margin-bottom: 1rem;
+                height: 3px;
+                width: 10rem;
+                background-image: linear-gradient(to right, $clr-red, transparent);
+            }
+            ul {
+                a {
+                    color: $clr-light;
+                }
+            }
+            .footer_about_section {
+                margin-bottom: 8rem;
+                p {
+                    line-height: 3rem;
+                }
+                .footer_socials {
+                    display: flex;
+                    gap: 1rem;
+                    margin: 3rem 0;
+                    li {
+                        &:first-child {
+                            a {
+                                padding: 1rem 1.5rem;
+                            }
+                        }
+                    }
+                    a {
+                        font-size: 14px;
+                        padding: 1rem 1.25rem;
+                        border: 1px solid $clr-light;
+                        border-radius: 100%;
+                    }
+                }
+            }
+            &_buttons {
+                ul {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 6px;
+                    margin-bottom: 6rem;
+                    li {
+                        i {
+                            transition: transform 0.25s ease;
+                        }
+                        &:first-child {
+                            margin-top: 1rem;
+                        }
+                    }
+                    a {
+                        .fa-arrow-right-long {
+                            margin-right: 6px;
+                        }
+                    }
+                }
+            }
+            .footer_contacts {
+                ul {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 3rem;
+                    margin-top: 2rem;
+                    li {
+                        display: flex;
+                        gap: 1rem;
+                        i {
+                            display: grid;
+                            place-content: center;
+                            border-radius: 100%;
+                            width: 30px;
+                            height: 30px;
+                            background: $clr-red;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .footer_end {
+        background: #010F1C;
+        padding: 2rem 0 4rem 0;
+        width: 100%;
+        margin: 0 auto;
+        &_text {
+            @include centerAll;
+            align-items: start;
+            flex-direction: column;
+            margin-left: 3rem;
+            max-width: 120rem;
+            a {
+                color: $clr-red;
+            }
+            p {
+                font-size: 1.5rem;
+            }
+            .terms_conditions {
+                display: flex;
+                margin: 0 1.5rem;
+                margin-top: 2rem;
+                gap: 1.5rem;
+                span {
+                    display: block;
+                    width: 1px;
+                    height: 2.5rem;
+                    background: $clr-light;
+                }
+            }
+        }
+    }
+    @include mediaQuery($desktop) {
+        background-position: left;
+        &_content {
+            .subscription {
+                display: grid;
+                grid-template-columns: 1fr 3fr 2fr;
+                grid-gap: 2rem;
+                .branding {
+                    margin-bottom: 0;
+                    justify-content: start;
+                    align-items: center;
+                    gap: 1.5rem;
+                    
+                }
+                &_text {
+                    margin: 0;
+                }
+                .email_section {
+                    align-items: center;
+                    flex-direction: row;
+                    margin: 0;
+                    gap: 1.5rem;
+                    a {
+                        transition: 0.5s ease;
+                        &:hover {
+                            background: $clr-light;
+                            color: $clr-red;
+                        }
+                    }
+                    input {
+                        height: max-content;
+                        
+                    }
+                }
+            }
+            .footer_separator {
+                width: 100%;
+            }
+            .footer_nav {
+                display: grid;
+                grid-template-columns: 2fr 1fr 1fr 1fr;
+                grid-gap: 6rem;
+                .footer_about_section {
+                    .footer_socials {
+                        a {
+                            transition: 0.5s ease;
+                            &:hover {
+                                border: 1px solid $clr-red;
+                                background: $clr-red;
+                            }
+                        }
+                    }
+                }
+                &_buttons {
+                    ul {
+                        li {
+                            a {
+                                transition: 0.25s ease;
+                                &:hover {
+                                    color: $clr-red;
+                                }
+                            }
+                            &:hover {
+                                i {
+                                    color: $clr-red;
+                                    transform: translateX(4px);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .footer_end {
+            display: flex;
+            justify-content: center;
+            &_text {
+                align-items: center;
+                justify-content: space-between;
+                flex-direction: row;
+                width: 100%;
+                margin: 0 3rem;
+                a {
+                    transition: 0.5s ease;
+                    &:hover {
+                        color: darken($color: $clr-red, $amount: 10%);
+                    }
+                }
+                .terms_conditions {
+                    margin: 0;
+                }
+            }
+        }
+    }
+}
