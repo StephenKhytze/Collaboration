@@ -108,11 +108,25 @@
                 }
             }
             &_buttons {
+                h1 {
+                    i {
+                        transition: 0.25s ease;
+                        &.active {
+                            transform: rotate(-180deg);
+                        }
+                    }
+                }
                 ul {
                     display: flex;
                     flex-direction: column;
                     gap: 6px;
                     margin-bottom: 6rem;
+                    max-height: 0;
+                    overflow: hidden;
+                    transition: 0.25s ease;
+                    &.active {
+                        max-height: 15rem;   
+                    }
                     li {
                         i {
                             transition: transform 0.25s ease;
@@ -235,7 +249,13 @@
                     }
                 }
                 &_buttons {
+                    h1 {
+                        i {
+                            display: none;
+                        }
+                    }
                     ul {
+                        max-height: 15rem;
                         li {
                             a {
                                 transition: 0.25s ease;
