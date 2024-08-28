@@ -972,6 +972,58 @@ body {
   flex-direction: column;
 }
 
+.quality_content_text {
+  display: flex;
+  flex-direction: column;
+}
+.quality_content_text .title h5 {
+  color: #eb0029;
+}
+.quality_content_text h4 {
+  color: #eb0029;
+}
+
+.strength_wrapper {
+  background-image: url(/estiva_img/feature_bg_2.png);
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+.strength_wrapper .strength_content {
+  display: flex;
+  flex-direction: column;
+}
+.strength_wrapper .strength_content_text h5 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.strength_wrapper .strength_content_text .end {
+  text-align: center;
+}
+.strength_wrapper .strength_content_text .end h3 {
+  margin: 2rem;
+}
+.strength_wrapper .strength_content_img {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.strength_wrapper .strength_content_img .img_cards:first-child {
+  border: right 1px;
+  border-right-style: dashed;
+}
+.strength_wrapper .strength_content_img .img_cards:nth-child(2) {
+  border: right 1px;
+  border-right-style: dashed;
+}
+.strength_wrapper .strength_content_img img {
+  padding: 2rem;
+}
+.strength_wrapper .strength_content_img h2 {
+  padding: 2rem;
+}
+
 .footer {
   background-image: url(/img/home/footer_bg_1.jpg);
   background-size: cover;

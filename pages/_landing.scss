@@ -964,3 +964,72 @@
         }
     }
 }
+
+
+
+.quality{
+    &_content{
+        &_text{
+            display: flex;
+            flex-direction: column;
+
+            .title{
+                h5{
+                    color: $clr-red;
+                }
+            }
+            h4{
+                color: $clr-red;
+            }
+        }
+    }
+}
+
+.strength{
+    &_wrapper{
+        background-image: url(/estiva_img/feature_bg_2.png);   
+        padding-top: 10rem;
+        padding-bottom: 10rem;
+        padding-left: 3rem;
+        padding-right: 3rem;
+        .strength_content{
+            display: flex;
+            flex-direction: column;
+            
+            &_text{
+                h5{
+                    text-align: center;
+                    margin-bottom: 2rem;
+                }
+                .end{
+                    text-align: center;
+                    h3{
+                        margin: 2rem;
+                    }
+                }
+            }
+            &_img{
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+
+                .img_cards:first-child{
+                    border: right 1px;;
+                    border-right-style: dashed;
+                }
+
+                .img_cards:nth-child(2){
+                    border: right 1px;;
+                    border-right-style: dashed;
+                }
+                img{
+                    padding: 2rem;
+                }
+                h2{
+                    padding: 2rem;
+                }
+            }
+        }
+    }
+
+} 
