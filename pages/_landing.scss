@@ -649,7 +649,7 @@
             h3{
                 margin-bottom: 2rem;
                 font-weight: 900;
-                font-size: 2.5rem;
+                font-size: 1.7rem;
                 a{
                     transition: 0.5s ease;
                     &:hover{
@@ -664,17 +664,17 @@
             display: flex;
             flex-direction: row;
             width: 100%;
-            gap: 8rem;
+            gap: 4rem;
             margin-bottom: 2rem;
             color: gray;
-            font-size: 1.8rem;
+            font-size: 11px;
             li{
                 display: flex;
                 flex-direction: row;
                 align-items: center;
                 i{
                     margin-right: .5rem;
-                    font-size: 2.4rem;
+                    font-size: 1.5rem;
                 }
             }
         }
@@ -683,16 +683,14 @@
         p{
             margin-bottom: 3rem;
             text-align: justify;
-            font-size: 2.3rem;
+            font-size: 1.4rem;
             color: gray;
  
         }
 
         .blog_banner{
             background-color: $clr-light;
-            height: 26rem;
             width: 100%;
-            scale: 1;
             margin-bottom: 3rem;
             &:hover, &:focus{
                 .inner_bg{
@@ -713,8 +711,8 @@
                 background-repeat: no-repeat; 
                 display: block;
                 width: 100%;
-                height: 100%;
-                border-radius: 4rem;
+                height: 18rem;
+                border-radius: 2rem;
                 transition: all 0.25s ease-in-out;
                 @include centerAll;
                 
@@ -725,6 +723,7 @@
                     margin: auto;
                     justify-content: center;
                     gap: 2rem;
+                    font-size: 1.2rem;
                     .chain{
                         transform: translateX(-11rem);
                         transition: 0.5s ease;
@@ -743,7 +742,7 @@
                         margin-bottom: 0;
                         aspect-ratio: 1;
                         border-radius: 50%;
-                        padding: 2rem;
+                        padding: 1.3rem;
  
                     }
                     
@@ -753,17 +752,21 @@
         .blog_card{
             > a{
                 display: flex;
+                justify-content: center;
                 align-items: center;
                 background-color: $clr-red;
                 border-radius: 3.5rem;
-                padding: 1.5rem 4rem ;
+                padding: 1.5rem  ;
                 color: white;
-                height: 6.9rem;
-                width: 21.5rem;
+                height: 4.3rem;
+                width: 16rem;
                 margin-bottom: 6rem;
-    
+                text-transform: uppercase;
+                font-size: 11px;
+                
                 i{
                     margin-left: 1rem;
+                    font-size: 13px;
                 }
             }
 
@@ -797,6 +800,7 @@
              .spin_ring{
                 position: relative;
                 border-radius: 50%;
+                font-size: 10px;
                 &::after{
                     content: "";
                     display: block;
@@ -804,7 +808,7 @@
                     height: 100%;
                     position: absolute;
                     border-radius: 50%;
-                    border: 2px solid gray;
+                    border: 1px solid gray;
                     border-left: none;
                     border-right: none;
                     scale: 1.4;
@@ -822,7 +826,7 @@
             a{
                 background: gray;
                 color: $clr-light;
-                width: 3rem;
+                width: 1.8rem;
                 border-radius: 50%;
                 aspect-ratio: 1;
                 display: flex;
@@ -838,22 +842,25 @@
                 display: inline-block;
                 background: linear-gradient(90deg, transparent, $clr-red);
                 width: 14rem;
-                height: 3px;
+                height: 1.7px;
                 &:last-child{
                 background: linear-gradient(-90deg, transparent, $clr-red);
                 }
             }
         }
         .blog_main_menu{
-            margin: 6rem;
+ 
             margin-bottom: 40px;
             box-shadow: 0px 10px 30px rgba(1, 15, 28, 0.08);
-            padding: 6rem;
-
+            padding: 4rem;
+            margin-top: 3rem;
+            border-radius: 3rem;
+            margin-inline: 1rem;
             .main{
-                font-size: 3rem;
+                font-size: 2rem;
                 display: flex;
                 align-items: center;
+                font-weight: 900;
                 span{
                     color: $clr-red;
                     padding-right: 2rem;
@@ -868,8 +875,7 @@
             .blog_menu{
                 display: flex;
                 flex-direction: column;
-                font-size: 2.2rem;
-                margin-top: 6rem;
+                margin-top: 3rem;
                 margin-right: 1rem;
                 a{
                     @include centerAll;
@@ -877,9 +883,9 @@
                     padding: 1rem;
                     transition: 0.5s ease;
                     position: relative;
-                    color: gray;
-                    font-weight: 550;
-                    font-size: 2rem;
+                    color: #4d5765;
+                    font-weight: 500;
+                    font-size: 1.3rem;
                 }
                 .home{
                     border-bottom: .1rem dashed gray;
@@ -909,22 +915,51 @@
         .blog_search{
             display: flex;
             justify-content: center;
+            box-shadow: 0px 10px 30px rgba(1, 15, 28, 0.08);
+            padding: 5rem;
+            border-radius: 3rem;
+            margin-inline: 1rem;
             .search_white{
-                background: green;
-                border-radius: 46%;
-                height: 6.9rem;
-                width: 21.5rem;
-                padding-top: 1.5rem;
-                border-top-right-radius: 0;
-                border-bottom-right-radius: 0;
+                input{
+                    background: #faf7f2;
+                    border-radius: 3.5rem;
+                    padding: 1.5rem;
+                    width: 19rem;
+                    padding-top: 1.5rem;
+                    border-top-right-radius: 0;
+                    border-bottom-right-radius: 0;
+                    border: none;
+                    &:focus{
+                        outline: 1px solid $clr-red;
+                        box-shadow: 0 0 1rem $clr-red;
+                    }
+                }
             }
             .search_red{
-                background: $clr-red;
-                border-radius: 46%;
-                height: 6.9rem;
-                width: 21.5rem;
-                border-top-left-radius: 0;
-                border-bottom-left-radius: 0; 
+                button{
+                    background: $clr-red;
+                    color: $clr-light;
+                    border-radius: 3.5rem;
+                    height: 4.5rem;
+                    width: 12rem;
+                    border-top-left-radius: 0;
+                    border-bottom-left-radius: 0; 
+                    border: none;
+                    cursor: pointer;
+                    transition: 0.5s ease;
+                    &:hover{
+                        background: #f13636;
+                    }
+                    i{
+                        margin-right: 1rem;
+                    }
+                }
+            }
+        }
+        .blog_categories{
+            ul{
+                display: flex;
+                flex-direction: column;
             }
         }
     }
