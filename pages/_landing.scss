@@ -761,6 +761,8 @@
             box-shadow: 0px 10px 30px rgba(1, 15, 28, 0.08);
             padding: 4rem;
             margin-top: 3rem;
+            border-radius: 3rem;
+            margin-inline: 1rem;
             .main{
                 font-size: 2rem;
                 display: flex;
@@ -820,22 +822,51 @@
         .blog_search{
             display: flex;
             justify-content: center;
+            box-shadow: 0px 10px 30px rgba(1, 15, 28, 0.08);
+            padding: 5rem;
+            border-radius: 3rem;
+            margin-inline: 1rem;
             .search_white{
-                background: green;
-                border-radius: 46%;
-                height: 6.9rem;
-                width: 21.5rem;
-                padding-top: 1.5rem;
-                border-top-right-radius: 0;
-                border-bottom-right-radius: 0;
+                input{
+                    background: #faf7f2;
+                    border-radius: 3.5rem;
+                    padding: 1.5rem;
+                    width: 19rem;
+                    padding-top: 1.5rem;
+                    border-top-right-radius: 0;
+                    border-bottom-right-radius: 0;
+                    border: none;
+                    &:focus{
+                        outline: 1px solid $clr-red;
+                        box-shadow: 0 0 1rem $clr-red;
+                    }
+                }
             }
             .search_red{
-                background: $clr-red;
-                border-radius: 46%;
-                height: 6.9rem;
-                width: 21.5rem;
-                border-top-left-radius: 0;
-                border-bottom-left-radius: 0; 
+                button{
+                    background: $clr-red;
+                    color: $clr-light;
+                    border-radius: 3.5rem;
+                    height: 4.5rem;
+                    width: 12rem;
+                    border-top-left-radius: 0;
+                    border-bottom-left-radius: 0; 
+                    border: none;
+                    cursor: pointer;
+                    transition: 0.5s ease;
+                    &:hover{
+                        background: #f13636;
+                    }
+                    i{
+                        margin-right: 1rem;
+                    }
+                }
+            }
+        }
+        .blog_categories{
+            ul{
+                display: flex;
+                flex-direction: column;
             }
         }
     }
