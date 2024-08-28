@@ -455,6 +455,9 @@ body {
   background: #ffffff;
   border-radius: 100%;
 }
+.choose_video .how_section_video i:hover {
+  cursor: pointer;
+}
 .choose_video .how_button {
   color: #ffffff;
   text-decoration: underline;
@@ -509,7 +512,7 @@ body {
     flex-direction: row;
   }
   .choose_video .how_button {
-    padding: 2rem 6rem;
+    margin: 10rem 6rem;
   }
 }
 
