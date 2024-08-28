@@ -377,6 +377,9 @@
                     color: $clr-red;
                     background: $clr-light;
                     border-radius: 100%;
+                    &:hover {
+                        cursor: pointer;
+                    }
                 }
             }
         }
@@ -444,7 +447,7 @@
             align-items: start;
             flex-direction: row;
             .how_button {
-                padding: 2rem 6rem;
+                margin: 10rem 6rem;
             }
         }
     }
