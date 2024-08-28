@@ -625,28 +625,65 @@ body {
   }
 }
 
-.app_content {
-  max-width: 130rem;
-  margin: 0 auto;
+.app_wrapper {
+  max-width: 122rem;
+  margin: 0 1rem;
   background: #faf7f2;
+  border-radius: 2rem;
+}
+.app_content {
+  background-image: url(/img/home/download_bg_1.png);
+  padding: 8rem;
+  padding-bottom: 7rem;
 }
 .app_content_wrapper {
-  background-image: url(/img/home/download_bg_1.png);
-  padding: 8rem 12rem;
+  max-width: 25rem;
+  margin: 0 auto;
+}
+.app_images {
+  z-index: -1;
+  position: absolute;
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 60rem;
+  transform: translateY(-5rem);
+}
+.app_images img {
+  height: -moz-max-content;
+  height: max-content;
+}
+.app_images img:first-child {
+  margin-left: 4rem;
+}
+.app_images img:nth-child(2) {
+  align-self: flex-start;
 }
 .app_text {
   max-width: 40rem;
 }
 .app_text_title {
   display: flex;
+  align-items: end;
   gap: 0.5rem;
 }
 .app_text_title h1 {
   font-size: 2rem;
 }
+.app_text_content {
+  margin: 2rem 0;
+}
+.app_text_content h1 {
+  font-size: 3rem;
+}
+.app_text_content p {
+  margin: 2rem 0;
+}
 .app_text_buttons {
   display: flex;
-  gap: 1.5rem;
+  flex-direction: column;
+  gap: 10rem;
 }
 .app_text_buttons a {
   display: flex;
@@ -654,9 +691,15 @@ body {
   justify-content: center;
   color: #ffffff;
   background: #eb0029;
+  width: -moz-max-content;
+  width: max-content;
   padding: 1rem 3rem;
   border-radius: 10rem;
   gap: 1rem;
+  transition: 0.35s ease;
+}
+.app_text_buttons a:nth-child(2) {
+  background: #ff9d2d;
 }
 .app_text_buttons a i {
   font-size: 3rem;
@@ -666,6 +709,27 @@ body {
 }
 .app_text_buttons a h1 {
   font-size: 1.75rem;
+}
+@media screen and (min-width: 1080px) {
+  .app_images {
+    display: flex;
+  }
+  .app_wrapper {
+    margin: 0 auto;
+  }
+  .app_content {
+    padding: 8rem 7.65rem 7.85rem 7.65rem;
+  }
+  .app_content_wrapper {
+    max-width: 100%;
+  }
+  .app_text_buttons {
+    flex-direction: row;
+    gap: 1.5rem;
+  }
+  .app_text_buttons a:hover {
+    background: #010f1c;
+  }
 }
 
 @keyframes zoom_image {

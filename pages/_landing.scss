@@ -569,36 +569,77 @@
 }
 
 .app {
-    &_content {
-        max-width: 130rem;
-        margin: 0 auto;
+    &_wrapper {
+        max-width: 122rem;
+        margin: 0 1rem;
         background: #faf7f2;
-        &_wrapper {
+        border-radius: 2rem;
+    }
+    &_content {
             background-image: url(/img/home/download_bg_1.png);
-            padding: 8rem 12rem;
+            padding: 8rem;
+            padding-bottom: 7rem;
+        &_wrapper {
+            max-width: 25rem;
+            margin: 0 auto;
+        }
+    }
+    &_images {
+        z-index: -1;
+        position: absolute;
+        display: none;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        height: 60rem;
+        transform: translateY(-5rem);
+        img {
+            height: max-content;
+            &:first-child {
+                margin-left: 4rem;
+            }
+            &:nth-child(2) {
+                align-self: flex-start;
+            }
         }
     }
     &_text {
         max-width: 40rem;
         &_title {
             display: flex;
+            align-items: end;
             gap: 0.5rem;
             h1 {
                 font-size: 2rem;
             }
         }
+        &_content {
+            margin: 2rem 0;
+            h1 {
+                font-size: 3rem;
+            }
+            p {
+                margin: 2rem 0;
+            }
+        }
         &_buttons {
             display: flex;
-            gap: 1.5rem;
+            flex-direction: column;
+            gap: 10rem;
             a {
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 color: $clr-light;
                 background: $clr-red;
+                width: max-content;
                 padding: 1rem 3rem;
                 border-radius: 10rem;
                 gap: 1rem;
+                transition: 0.35s ease;
+                &:nth-child(2) {
+                    background: $clr-yellow;
+                }
                 i {
                     font-size: 3rem;
                 }
@@ -607,6 +648,31 @@
                 }
                 h1 {
                     font-size: 1.75rem;
+                }
+            }
+        }
+    }
+    @include mediaQuery($desktop) {
+        &_images {
+            display: flex;
+        }
+        &_wrapper {
+            margin: 0 auto;
+        }
+        &_content {
+            padding: 8rem 7.65rem 7.85rem 7.65rem;
+            &_wrapper {
+                max-width: 100%;
+            }
+        }
+        &_text {
+            &_buttons {
+                flex-direction: row;
+                gap: 1.5rem;
+                a {
+                    &:hover {
+                        background: $clr-dark;
+                    }
                 }
             }
         }
