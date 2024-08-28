@@ -316,7 +316,7 @@
         &:hover {
             .choose_img_overlay {
                 scale: 1.0;
-                animation: choose_image 4.5s;
+                animation: zoom_image 4.5s;
                 animation-timing-function: ease;
                 animation-iteration-count: infinite;
             }
@@ -455,7 +455,8 @@
     background-size: cover;
     background-position: center;
     &_wrapper {
-        max-width: 115rem;
+        position: relative;
+        max-width: 130rem;
         margin: 0 auto;
         padding: 10rem 0;
         padding-bottom: 25rem;
@@ -502,6 +503,7 @@
             a {
                 padding: 0.5rem 1.5rem;
                 color: $clr-red;
+                font-weight: 600    ;
                 &::after {
                     background: $clr-light;
                 }
@@ -515,9 +517,100 @@
             }
         }
     }
+    .discount_bubble {
+        position: absolute;
+        top: 11rem;
+        right: -4rem;
+        &_text {
+            position: absolute;
+            top: 4.5rem;
+            left: 8.5rem;
+            h1 {
+                font-weight: 600;
+                font-size: 1.5rem;
+                line-height: 1.3;
+                text-align: center;
+            }
+            span {
+                color: $clr-red;
+                display: block;
+                font-size: 4rem;
+            }
+        }
+        img {
+            width: 22rem;
+        }
+    }
+    @include mediaQuery($desktop) {
+        &:hover {
+            .discount_bubble {
+                animation: zoom_image 4.5s;
+                animation-timing-function: ease;
+                animation-iteration-count: infinite;
+            }
+        }
+        &_wrapper {
+            display: flex;
+            padding-bottom: 20rem;
+        }
+        &_text {
+            max-width: 60rem;
+            margin-left: 16rem;
+            .order_now {
+                a {
+                    padding: 1.5rem 3.5rem;
+                }
+            }
+        }
+    }
 }
 
-@keyframes choose_image {
+.app {
+    &_content {
+        max-width: 130rem;
+        margin: 0 auto;
+        background: #faf7f2;
+        &_wrapper {
+            background-image: url(/img/home/download_bg_1.png);
+            padding: 8rem 12rem;
+        }
+    }
+    &_text {
+        max-width: 40rem;
+        &_title {
+            display: flex;
+            gap: 0.5rem;
+            h1 {
+                font-size: 2rem;
+            }
+        }
+        &_buttons {
+            display: flex;
+            gap: 1.5rem;
+            a {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: $clr-light;
+                background: $clr-red;
+                padding: 1rem 3rem;
+                border-radius: 10rem;
+                gap: 1rem;
+                i {
+                    font-size: 3rem;
+                }
+                p {
+                    font-size: 1rem;
+                }
+                h1 {
+                    font-size: 1.75rem;
+                }
+            }
+        }
+    }
+}
+
+@keyframes zoom_image {
     25% {
         scale: 0.9;
     }
