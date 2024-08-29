@@ -931,7 +931,7 @@ body {
   font-size: 2rem;
   margin-right: 1rem;
 }
-.blog_wrapper .author {
+.blog_wrapper .blog_author {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -941,34 +941,34 @@ body {
   margin-inline: 1rem;
   padding-bottom: 3rem;
 }
-.blog_wrapper .author img {
+.blog_wrapper .blog_author img {
   border-radius: 50%;
   width: 14rem;
   margin-top: 3.5rem;
 }
-.blog_wrapper .author h3 {
+.blog_wrapper .blog_author h3 {
   margin-top: 1rem;
   font-weight: 900;
   font-size: 2.2rem;
 }
-.blog_wrapper .author p {
+.blog_wrapper .blog_author p {
   margin-top: 1rem;
   margin-inline: 4rem;
   text-align: center;
   color: #4d5765;
 }
-.blog_wrapper .author .blog_media {
+.blog_wrapper .blog_author .blog_media {
   display: flex;
   gap: 2rem;
 }
-.blog_wrapper .author .blog_media a {
+.blog_wrapper .blog_author .blog_media a {
   border-right: 1px solid #e0e0e0;
   padding-right: 1.5rem;
   font-size: 1.5rem;
   color: #4d5765;
   transition: 0.5s ease;
 }
-.blog_wrapper .author .blog_media a:hover {
+.blog_wrapper .blog_author .blog_media a:hover {
   color: #eb0029;
 }
 .blog_wrapper .blog_post {
@@ -1083,6 +1083,38 @@ body {
   }
   .blog_wrapper .blog_wrapper2 .blog_card .blog_banner .inner_bg {
     height: 25rem;
+  }
+  .blog_wrapper .blog_wrapper3 {
+    width: 39rem;
+  }
+  .blog_wrapper .blog_wrapper3 .blog_main_menu {
+    padding: 3rem;
+  }
+  .blog_wrapper .blog_wrapper3 .blog_search {
+    justify-content: center;
+    padding: 3rem;
+  }
+  .blog_wrapper .blog_wrapper3 .blog_search .search_white {
+    width: 15rem;
+  }
+  .blog_wrapper .blog_wrapper3 .blog_search .search_white input {
+    width: 100%;
+  }
+  .blog_wrapper .blog_wrapper3 .blog_categories {
+    padding: 2.5rem;
+  }
+  .blog_wrapper .blog_wrapper3 .blog_post {
+    padding: 2.5rem;
+  }
+  .blog_wrapper .blog_wrapper3 .blog_post .blog_text h3 {
+    width: 19rem;
+  }
+  .blog_wrapper .blog_wrapper3 .blog_tags ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .blog_wrapper .blog_wrapper3 .blog_tags ul li {
+    place-content: center;
   }
 }
 

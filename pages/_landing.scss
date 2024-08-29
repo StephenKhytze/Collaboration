@@ -567,7 +567,6 @@
             }
         }
 
-
         ul{
             display: flex;
             flex-direction: row;
@@ -590,7 +589,6 @@
                 }
             }
         }
-
 
         p{
             margin-bottom: 3rem;
@@ -661,6 +659,7 @@
                 }
             }
         }
+
         .blog_card{
             > a{
                 display: flex;
@@ -705,6 +704,7 @@
                 }
             }
         }
+
         .blog_spin{
             @include centerAll;
             justify-content: center;
@@ -760,6 +760,7 @@
                 }
             }
         }
+
         .blog_main_menu{
  
             margin-bottom: 40px;
@@ -824,6 +825,7 @@
                 }
             }
         }
+
         .blog_search{
             display: flex;
             box-shadow: 0px 10px 30px rgba(1, 15, 28, 0.08);
@@ -868,6 +870,7 @@
                 }
             }
         }
+
         .blog_categories{
             padding-block: 6rem;
             padding-inline: 3rem;
@@ -914,7 +917,8 @@
                 }
             }
         }
-        .author{
+
+        .blog_author{
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -1016,6 +1020,7 @@
                 }
             }
         }
+
         .blog_tags{
             margin-bottom: 40px;
             box-shadow: 0px 10px 30px rgba(1, 15, 28, 0.08);
@@ -1065,6 +1070,7 @@
                 }
             }
         }
+
         @include mediaQuery($desktop){
             display: grid;
             grid-template-columns: 2fr 1fr;
@@ -1082,6 +1088,50 @@
                     }
                 }
             }
+            
+            .blog_wrapper3{
+                width: 39rem;
+
+                .blog_main_menu{
+                    padding: 3rem;
+                }
+
+                .blog_search{
+                    justify-content: center;
+                    padding: 3rem;
+                    .search_white{
+                        width: 15rem;
+                        input{
+                            width: 100%;
+                        }
+                    }
+                }
+
+                .blog_categories{
+                    padding: 2.5rem;
+                }
+
+                .blog_post{
+                    padding: 2.5rem;
+                    .blog_text{
+                        h3{
+                            width: 19rem;
+                        }
+                    }
+                }
+
+                .blog_tags{
+                    ul{
+                        display: grid;
+                        grid-template-columns: 1fr 1fr 1fr;
+                        li {
+                            place-content: center;
+                        }
+                    }
+                }
+
+            }
+            
         }
     }
 }
