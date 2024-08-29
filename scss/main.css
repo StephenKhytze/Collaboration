@@ -657,7 +657,7 @@ body {
 
 .popular_menu_wrapper {
   margin: 0 auto;
-  max-width: 40rem;
+  max-width: 50rem;
   text-align: center;
   padding: 10rem 0;
 }
@@ -685,12 +685,16 @@ body {
   display: flex;
   justify-content: center;
   gap: 1rem;
+  flex-wrap: wrap;
+}
+.popular_menu_tabs ul li {
+  margin-bottom: 3rem;
 }
 .popular_menu_tabs ul li a {
   color: #4d5765;
   font-size: 1.5rem;
   font-weight: 600;
-  border: 2px solid #4d5765;
+  border: 1px solid #4d5765;
   border-radius: 10rem;
   padding: 1rem 2.75rem;
 }
@@ -706,9 +710,12 @@ body {
   display: flex;
   gap: 4rem;
 }
+.popular_menu_slider .menu_slider_tabs {
+  margin: 0 auto;
+}
 .popular_menu_slider .menu_slider_tab {
-  max-width: 28.5rem;
-  border-bottom: 5px solid transparent;
+  max-width: 35rem;
+  border-bottom: 5px solid #eb0029;
   border-radius: 2.5rem;
   padding: 4rem 0;
   transition: 0.25s ease;
@@ -735,6 +742,9 @@ body {
 @media screen and (min-width: 1080px) {
   .popular_menu_wrapper {
     max-width: 120rem;
+  }
+  .popular_menu_slider .menu_slider_tab {
+    max-width: 28.5rem;
   }
 }
 
