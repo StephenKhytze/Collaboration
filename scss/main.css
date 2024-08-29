@@ -71,6 +71,27 @@ body {
   transition: all 0.5s ease;
   z-index: -1;
 }
+.--left-2::before, .--left-2::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  border-radius: 10rem;
+}
+.--left-2::after {
+  opacity: 1;
+  width: 100%;
+  background: #eb0029;
+  transition: all 0.5s ease;
+  z-index: -2;
+}
+.--left-2::before {
+  width: 0%;
+  background: #010f1c;
+  transition: all 0.5s ease;
+  z-index: -1;
+}
 @media screen and (min-width: 1080px) {
   .--left:hover {
     color: #eb0029;
@@ -79,6 +100,12 @@ body {
     opacity: 0;
   }
   .--left:hover::before {
+    width: 100%;
+  }
+  .--left-2:hover {
+    color: #eb0029;
+  }
+  .--left-2:hover::before {
     width: 100%;
   }
 }
@@ -289,6 +316,9 @@ body {
   }
   .about_text .checklist_section .video_section {
     margin: 0 5rem 0 5rem;
+  }
+  .about_text .checklist_section .video_section i:hover {
+    cursor: pointer;
   }
   .about .discover_section {
     display: flex;
@@ -622,6 +652,89 @@ body {
   }
   .offer_text .order_now a {
     padding: 1.5rem 3.5rem;
+  }
+}
+
+.popular_menu_wrapper {
+  margin: 0 auto;
+  max-width: 40rem;
+  text-align: center;
+  padding: 10rem 0;
+}
+.popular_menu_title {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  font-size: 1.25rem;
+  gap: 0.5rem;
+}
+.popular_menu_text {
+  margin: 2rem auto;
+  max-width: 60rem;
+}
+.popular_menu_text h1 {
+  font-size: 3rem;
+}
+.popular_menu_text p {
+  margin: 4rem 0;
+}
+.popular_menu_tabs {
+  margin: 4rem 0;
+}
+.popular_menu_tabs ul {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+.popular_menu_tabs ul li a {
+  color: #4d5765;
+  font-size: 1.5rem;
+  font-weight: 600;
+  border: 2px solid #4d5765;
+  border-radius: 10rem;
+  padding: 1rem 2.75rem;
+}
+.popular_menu_tabs ul li a.active {
+  background: #eb0029;
+  border: 2px solid #eb0029;
+  color: #ffffff;
+}
+.popular_menu_slider {
+  margin: 0 auto;
+}
+.popular_menu_slider .menu_slider {
+  display: flex;
+  gap: 4rem;
+}
+.popular_menu_slider .menu_slider_tab {
+  max-width: 28.5rem;
+  border-bottom: 5px solid transparent;
+  border-radius: 2.5rem;
+  padding: 4rem 0;
+  transition: 0.25s ease;
+}
+.popular_menu_slider .menu_slider_tab_hover {
+  border-bottom: 5px solid #eb0029;
+}
+.popular_menu_slider .menu_slider_tab_img img {
+  width: 25rem;
+}
+.popular_menu_slider .menu_slider_tab_text {
+  padding: 0 2rem;
+}
+.popular_menu_slider .menu_slider_tab_text p {
+  margin: 2rem 0;
+}
+.popular_menu_slider .menu_slider_tab_text a {
+  font-weight: 600;
+  padding: 1.5rem 3.5rem;
+}
+.popular_menu_slider .menu_slider_tab_text a:hover {
+  color: #ffffff;
+}
+@media screen and (min-width: 1080px) {
+  .popular_menu_wrapper {
+    max-width: 120rem;
   }
 }
 

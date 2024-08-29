@@ -31,16 +31,47 @@
            transition: all 0.5s ease;
            z-index: -1;
        }
+    &-2 {
+        &::before, &::after {
+            content: "";   
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 100%;
+            border-radius: 10rem;
+           }
+           &::after {
+               opacity: 1;
+               width: 100%;
+               background: $clr-red;
+               transition: all 0.5s ease;
+               z-index: -2;
+           }
+           &::before {
+               width: 0%;
+               background: $clr-dark;
+               transition: all 0.5s ease;
+               z-index: -1;
+           }
+    }
     @include mediaQuery($desktop) {
         &:hover {
             color: $clr-red;
-               &::after {
-                    opacity: 0;
+            &::after {
+                opacity: 0;
             }
-               &::before {
-                   width: 100%;
-               }
-           }
+            &::before {
+                width: 100%;
+            }
+        }
+        &-2 {
+            &:hover {
+                color: $clr-red;
+                &::before {
+                    width: 100%;
+                }
+            }
+        }
     }
 }
 
