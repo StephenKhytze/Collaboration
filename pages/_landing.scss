@@ -632,11 +632,11 @@
             }
             &_tab {
                 max-width: 35rem;
-                border-bottom: 5px solid $clr-red;
+                border-bottom: 5px solid transparent;
                 border-radius: 2.5rem;
                 padding: 4rem 0;
-                transition: 0.25s ease;
-                &_hover {
+                transition: 0.15s ease;
+                &:hover {
                     border-bottom: 5px solid $clr-red;
                 }
                 &_img {
