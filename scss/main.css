@@ -715,12 +715,12 @@ body {
 }
 .popular_menu_slider .menu_slider_tab {
   max-width: 35rem;
-  border-bottom: 5px solid #eb0029;
+  border-bottom: 5px solid transparent;
   border-radius: 2.5rem;
   padding: 4rem 0;
-  transition: 0.25s ease;
+  transition: 0.15s ease;
 }
-.popular_menu_slider .menu_slider_tab_hover {
+.popular_menu_slider .menu_slider_tab:hover {
   border-bottom: 5px solid #eb0029;
 }
 .popular_menu_slider .menu_slider_tab_img img {
