@@ -1,7 +1,7 @@
 .header {
     width: 100%;
     background: $clr-light;
-    z-index: 99;
+    z-index: 9999;
     transition: 0.25s ease;
     box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 24px;
     &_wrapper {
