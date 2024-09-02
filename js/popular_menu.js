@@ -1,6 +1,6 @@
-const menuNav = document.querySelectorAll('.tab_nav_link');
-const menuContent = document.querySelectorAll('.menu_content_item');
-const menuTabs = document.querySelector('.menu_content')
+const menuNav = document.querySelectorAll('.popular_menu_nav');
+const menuContent = document.querySelectorAll('.menu_slider_tabs');
+const menuTabs = document.querySelector('.menu_slider')
 
 menuNav.forEach((menu) => {
     menu.addEventListener('click', () => {
@@ -23,3 +23,15 @@ menuNav.forEach((menu) => {
         }, 250);
     });
 });
+
+function removeActiveMenu() {
+    menuNav.forEach((menu) => {
+        menu.classList.remove('active');
+    });
+}
+
+function removeActiveContent() {
+    menuContent.forEach((menu) => {
+        menu.classList.remove('active');
+    });
+}

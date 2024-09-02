@@ -474,6 +474,13 @@
 
     <section class="popular_menu">
         <div class="container">
+            <div class="popular_menu_background">
+                <img src="/img/home/leaf_1.png" alt="">
+                <div class="bg-left">
+                    <img src="/img/home/red_chili.png" alt="">
+                    <img src="/img/home/leaf_1.png" alt="">
+                </div>
+            </div>
             <div class="popular_menu_wrapper">
                 <div class="popular_menu_title">
                     <img src="/img/home/title_icon.svg" alt="">
@@ -485,16 +492,16 @@
                 </div>
                 <div class="popular_menu_tabs">
                     <ul>
-                        <li><a href="javascript:void(0)" class="active">BEEF</a></li>
-                        <li><a href="javascript:void(0)">CHICKEN</a></li>
-                        <li><a href="javascript:void(0)">MAIN</a></li>
-                        <li><a href="javascript:void(0)">SOLO</a></li>
-                        <li><a href="javascript:void(0)">SIDES</a></li>
+                        <li><a href="javascript:void(0)" id="tab-1" class="popular_menu_nav active">BEEF</a></li>
+                        <li><a href="javascript:void(0)" id="tab-2" class="popular_menu_nav">CHICKEN</a></li>
+                        <li><a href="javascript:void(0)" id="tab-3" class="popular_menu_nav">MAIN DISHES</a></li>
+                        <li><a href="javascript:void(0)" id="tab-4" class="popular_menu_nav">SOLO DISHES</a></li>
+                        <li><a href="javascript:void(0)" id="tab-5" class="popular_menu_nav">SIDE DISHES</a></li>
                     </ul>
                 </div>
                 <div class="popular_menu_slider">
                         <div class="menu_slider">
-                            <div class="menu_slider_tabs active">
+                            <div id="tab-1-content" class="menu_slider_tabs active">
                                 <div class="menu_slider_tab">
                                     <div class="menu_slider_tab_img">
                                         <img src="/img/home/3ea7870ade3213603d609b808f35582a_3.png" alt="">
@@ -536,7 +543,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="menu_slider_tabs">
+                            <div id="tab-2-content" class="menu_slider_tabs">
                                 <div class="menu_slider_tab">
                                     <div class="menu_slider_tab_img">
                                         <img src="/img/home/3ea7870ade3213603d609b808f35582a_1.png" alt="">
@@ -578,7 +585,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="menu_slider_tabs">
+                            <div id="tab-3-content" class="menu_slider_tabs">
                                 <div class="menu_slider_tab">
                                     <div class="menu_slider_tab_img">
                                         <img src="/img/home/3ea7870ade3213603d609b808f35582a_1.png" alt="">
@@ -620,7 +627,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="menu_slider_tabs">
+                            <div id="tab-4-content" class="menu_slider_tabs">
                                 <div class="menu_slider_tab">
                                     <div class="menu_slider_tab_img">
                                         <img src="/img/home/3ea7870ade3213603d609b808f35582a_2.png" alt="">
@@ -662,7 +669,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="menu_slider_tabs">
+                            <div id="tab-5-content" class="menu_slider_tabs">
                                 <div class="menu_slider_tab">
                                     <div class="menu_slider_tab_img">
                                         <img src="/img/home/3ea7870ade3213603d609b808f35582a_4.png" alt="">
@@ -886,7 +893,8 @@
             760: {
                 items: 1,
                 slideBy: 0.25,
-                speed: 1000
+                speed: 1000,    
+                mouseDrag: true,
             }
           }
         });
