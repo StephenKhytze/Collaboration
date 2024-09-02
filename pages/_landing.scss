@@ -297,7 +297,7 @@
             padding-bottom: 12rem;
             border-radius: 2rem;
             background: $clr-light;
-            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 22px 0px;
             position: relative;
             overflow: hidden;
             display: inline-block;
@@ -423,6 +423,7 @@
             }
             &_wrapper {
                 padding: 8rem 0;
+                z-index: 900;
             }
             &_item {
                 max-width: 40rem;
@@ -430,6 +431,11 @@
                     .browse_slider_text {
                         h1, p {
                             color: $clr-light;
+                        }
+                        h1 {
+                            &:hover {
+                                color:  #bdbdbd;
+                            }
                         }
                         &::after {
                             opacity: 0;
@@ -462,6 +468,7 @@
                 padding-top: 12rem;
                 h1 {
                     font-size: 2.25rem;
+                    cursor: pointer;
                 }
                 p {
                     margin: 1rem 0;
@@ -480,9 +487,12 @@
             }
         }
         .tns-controls {
-            top: 40%;
+            top: 32.5%;
             opacity: 0;
             transition: 0.5s ease;
+            width: 115%;
+            left: 50%;
+            transform: translateX(-50%);
         }
         .tns-nav {
             &-buttons {
@@ -899,6 +909,11 @@
             gap: 4rem;
             &_tabs {
                 margin: 0 auto;
+                display: none;
+                &.active {
+                    display: flex;
+                    flex-direction: column;
+                }
             }
             &_tab {
                 max-width: 35rem;
@@ -906,9 +921,7 @@
                 border-radius: 2.5rem;
                 padding: 4rem 0;
                 transition: 0.15s ease;
-                &:hover {
-                    border-bottom: 5px solid $clr-red;
-                }
+                box-shadow: rgba(100, 100, 111, 0.1) 0px 7px 22px 0px;
                 &_img {
                     img {
                         width: 25rem;
@@ -938,6 +951,9 @@
             .menu_slider {
                 &_tab {
                     max-width: 28.5rem;
+                    &:hover {
+                        border-bottom: 5px solid $clr-red;
+                    }
                 }
             }
         }
