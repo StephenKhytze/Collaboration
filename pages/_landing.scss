@@ -1108,6 +1108,183 @@
     }
 }
 
+.food_blog {
+    padding: 10rem 0;
+    padding-bottom: 18rem;
+    position: relative;
+    &_overlay {
+        display: none;
+        width: 100%;
+        position: absolute;
+        justify-content: space-between;
+        padding: 0 5rem;
+        bottom: 3.5rem;
+        img {
+            width: max-content;
+            height: max-content;
+            animation: move_background2 12s linear;
+            animation-iteration-count: infinite;
+            &:last-child {
+                animation-delay: 2s;
+            }
+        }
+    }
+    &_wrapper {
+        max-width: 120rem;
+        margin: 0 auto;
+    }
+    &_title {
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        font-size: 1.25rem;
+        gap: 0.5rem;
+    }
+    &_text {
+        margin: 2rem auto;
+        max-width: 40rem;
+        text-align: center;
+        h1 {
+            font-size: 3rem;
+        }
+        p {
+            margin: 4rem 0;
+        }
+    }
+    &_tabs {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 4rem;
+    }
+    .blog_tab {
+        margin: 0 auto;
+        max-width: 39.5rem;
+        overflow: hidden;
+        border-radius: 2rem;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        &:nth-of-type(2) {
+            .blog_tab_img {
+                background-image: url(/img/home/66e2e8426e3f243bdfc6516321e4d2a1_18.jpg);
+            }
+        }
+        &:nth-of-type(3) {
+            .blog_tab_img {
+                background-image: url(/img/home/66e2e8426e3f243bdfc6516321e4d2a1_19.jpg);
+            }
+        }
+        &:last-of-type {
+            .blog_tab_img {
+                background-image: url(/img/home/66e2e8426e3f243bdfc6516321e4d2a1_20.jpg);
+            }
+        }
+        &_img {
+            width: 100%;
+            height: 24rem;
+            background-image: url(/img/home/66e2e8426e3f243bdfc6516321e4d2a1_13.jpg);
+            background-size: 100%;
+            background-position: center;
+        }
+        &_text {
+            padding: 3rem;
+            i {
+                margin-right: 0.5rem;
+                color: $clr-red;
+            }
+            &_header {
+                p {
+                    font-size: 1.35rem;
+                    line-height: 1.7;
+                    &:last-child {
+                        margin-left: 1rem;
+                    }
+                }
+            }
+            &_content {
+                padding: 2rem 0;
+                a {
+                    font-size: 1.8rem;
+                }
+            }
+            &_footer {
+                @include centerAll;
+                border-top: 1px solid #e0e0e0;
+                padding: 2rem 0;
+                font-size: 1.35rem;
+                a {
+                    &:first-child {
+                        font-weight: 600;
+                        span {
+                            display: block;
+                            height: 1px;
+                            width: 50%;
+                            background: rgba($color: #000000, $alpha: 0.7);
+                            transition: 0.5s ease;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @include mediaQuery($desktop) {
+        &_overlay {
+            display: flex;
+        }
+        &_text {
+            max-width: 60rem;
+        }
+        &_tabs {
+            flex-direction: row;
+            gap: 3rem;
+            .blog_tab {
+                max-width: 50rem;
+                width: 100%;
+                z-index: 999;
+                &:first-of-type, &:nth-child(2) {
+                    .blog_tab_img {
+                        background-size: 105%;
+                        &:hover {
+                            background-size: 115%;
+                        }
+                    }
+                }
+                &_img {
+                    transition: background-size 0.5s ease;
+                    &:hover {
+                        background-size: 115%;
+                    }
+                }
+                &_text {
+                    a {
+                        transition: 0.5s ease;
+                        &:hover {
+                            color: $clr-red;
+                        }
+                    }
+                    &_content {
+                        a {
+                           font-size: 2.45rem; 
+                        }
+                    }
+                    &_footer {
+                        a {
+                            &:hover {
+                                span {
+                                    width: 100%;
+                                    background: $clr-red;
+                                }
+                            }
+                        }
+                    }
+                }
+                &:last-of-type {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
 @keyframes zoom_image {
     25% {
         scale: 0.9;

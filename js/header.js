@@ -30,8 +30,8 @@ document.querySelectorAll('.header_nav_buttons > li').forEach(li => {
                 tab.classList.remove('active');
                 tabContent.style.opacity = 0;
                 tabContent.style.maxHeight = 0;
-                tab.style.background = 'transparent';
                 setTimeout(() => {
+                    tab.style.background = 'transparent';
                     tab.style.position = 'absolute';
                 }, 255);
             } else {
