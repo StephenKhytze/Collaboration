@@ -1332,6 +1332,12 @@ body {
   .chefs_slider_socials ul li a:hover i {
     color: #eb0029;
   }
+  .chefs_slider .tns-nav-buttons {
+    display: none;
+  }
+  .chefs_slider .tns-nav-buttons:first-child, .chefs_slider .tns-nav-buttons:nth-child(2), .chefs_slider .tns-nav-buttons:nth-child(3) {
+    display: grid;
+  }
 }
 
 .food_blog {

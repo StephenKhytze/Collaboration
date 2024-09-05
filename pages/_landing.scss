@@ -1230,6 +1230,12 @@
                     }
                 }
             }
+            .tns-nav-buttons {
+                display: none;
+                &:first-child, &:nth-child(2), &:nth-child(3) {
+                    display: grid;
+                }
+            }
         }
     }
 }
