@@ -972,56 +972,235 @@ body {
   flex-direction: column;
 }
 
-.quality_content_text {
+.quality_wrapper {
   display: flex;
   flex-direction: column;
+  max-width: 130rem;
+  margin: 0 auto;
+  background: url(/img/estiva_img/about_line.png);
+  background-repeat: no-repeat;
+  background-position: top;
+  background-position: center;
+  z-index: 0;
+  top: -150px;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
-.quality_content_text .title h5 {
-  color: #eb0029;
+.quality_content {
+  margin-top: 12rem;
 }
-.quality_content_text h4 {
-  color: #eb0029;
-}
-
-.strength_wrapper {
-  background-image: url(/estiva_img/feature_bg_2.png);
-  padding-top: 10rem;
+.quality_text {
+  padding: 0 3rem;
   padding-bottom: 10rem;
-  padding-left: 3rem;
-  padding-right: 3rem;
 }
-.strength_wrapper .strength_content {
+.quality_text .quality_title {
   display: flex;
-  flex-direction: column;
-}
-.strength_wrapper .strength_content_text h5 {
-  text-align: center;
+  gap: 1rem;
   margin-bottom: 2rem;
 }
-.strength_wrapper .strength_content_text .end {
-  text-align: center;
+.quality_text .quality_title h1 {
+  font-size: 2rem;
 }
-.strength_wrapper .strength_content_text .end h3 {
-  margin: 2rem;
+.quality_text_content {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
-.strength_wrapper .strength_content_img {
+.quality_text_content h1 {
+  font-size: 3.5rem;
+  font-weight: 600;
+}
+.quality_text_content p {
+  color: rgba(0, 0, 0, 0.7);
+  margin: 2rem 0;
+}
+.quality_text_discover {
+  display: flex;
+  flex-direction: row;
+}
+.quality_text_discover .discover_button {
+  margin: 2.5rem 0;
+  padding: 1rem 2rem;
+  font-weight: 600;
+}
+.quality_text_discover .experience_information {
+  display: flex;
+  gap: 2rem;
+}
+.quality_text_discover .experience_information h1 {
+  color: #eb0029;
+}
+.quality_text_discover .experience_information_text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.quality_text_discover .experience_information_text p {
+  font-size: 1.75rem;
+}
+.quality_content_img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.quality_content_img .image_about {
+  margin-top: -10rem;
+  z-index: 2;
+  width: 90%;
+  position: absolute;
+  rotate: 180deg;
+  justify-content: end;
+}
+.quality_content_img .bg_about {
+  margin-top: -10rem;
+  z-index: -1;
+  left: 0;
+  width: 100%;
+  margin-right: -6rem;
+  transform: scaleX(-1);
+}
+@media screen and (min-width: 1080px) {
+  .quality .quality_text_content {
+    padding-right: 8rem;
+  }
+  .quality .quality_content {
+    display: flex;
+    flex-direction: row;
+  }
+  .quality .quality_content_img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  .quality .quality_content_img img {
+    width: unset;
+  }
+  .quality .quality_content_img .image_about {
+    z-index: 2;
+    position: absolute;
+    rotate: 180deg;
+    justify-content: end;
+    margin-left: -19rem;
+  }
+  .quality .quality_content_img .bg_about {
+    z-index: -1;
+    left: 0;
+    margin-right: -6rem;
+    transform: scaleX(-1);
+  }
+}
+
+.strength {
+  background: #010f1c;
+}
+.strength_wrapper {
+  padding: 8rem 3rem;
+  background-image: url(/img/estiva_img/feature_bg_2.png);
+  background-size: cover;
+  background-position: center;
+}
+.strength .strength_content {
+  display: flex;
+  flex-direction: column;
+  color: #ffffff;
+}
+.strength .strength_content_img {
   display: flex;
   flex-direction: column;
   text-align: center;
+  gap: 2rem;
 }
-.strength_wrapper .strength_content_img .img_cards:first-child {
-  border: right 1px;
-  border-right-style: dashed;
+.strength .strength_content_img img {
+  transition: 0.5s ease;
 }
-.strength_wrapper .strength_content_img .img_cards:nth-child(2) {
-  border: right 1px;
-  border-right-style: dashed;
+.strength .strength_content_img h2 {
+  margin: 3rem;
 }
-.strength_wrapper .strength_content_img img {
-  padding: 2rem;
+.strength .strength_content_img .img_cards:first-child {
+  margin-top: 5rem;
+  border-right: 1px dashed;
 }
-.strength_wrapper .strength_content_img h2 {
-  padding: 2rem;
+.strength .strength_content_img .img_cards:nth-child(2) {
+  margin-top: 5rem;
+  border-right: 1px dashed;
+}
+.strength .strength_content_img .img_cards:last-child {
+  margin-top: 5rem;
+}
+.strength .img_cards:hover img {
+  transform: rotateY(180deg);
+  transition: 0.5s ease;
+}
+.strength_text {
+  color: #ffffff;
+  text-align: center;
+}
+.strength_text p {
+  color: #ffffff;
+}
+.strength_text_header {
+  margin: 2rem 0;
+}
+.strength_text_header h1 {
+  font-size: 3rem;
+}
+.strength_text_title {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+}
+@media screen and (min-width: 1080px) {
+  .strength .strength_content_img {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .strength .img_cards {
+    width: 22%;
+    padding: 2.5rem;
+  }
+  .strength .img_cards p {
+    line-height: 3rem;
+  }
+  .strength .strength_text_content {
+    margin: 0 60rem;
+  }
+}
+
+.testimonial {
+  background: #faf7f2;
+}
+.testimonial_wrapper {
+  padding-top: 10rem;
+  background-image: url(/img/estiva_img/feature_bg_2.png);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  max-width: 130rem;
+  margin: 0 auto;
+}
+.testimonial_text {
+  padding-left: 1rem;
+  padding-right: 5rem;
+  padding-bottom: 10rem;
+}
+.testimonial_text .testimonial_title {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+.testimonial_text .testimonial_title h1 {
+  font-size: 2rem;
+}
+.testimonial_text_content h1 {
+  font-size: 3.5rem;
+  font-weight: 600;
+}
+.testimonial_text_content p {
+  color: rgba(0, 0, 0, 0.7);
+  margin: 2rem 0;
 }
 
 .footer {

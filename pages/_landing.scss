@@ -626,15 +626,6 @@
 }
 
 
-
-
-
-
-
-
-
-
-
 // ------------------------------------------------inigo--------------------------------------------------------------------
 
 .blog{
@@ -967,69 +958,263 @@
 
 
 
-.quality{
-    &_content{
-        &_text{
-            display: flex;
-            flex-direction: column;
 
-            .title{
-                h5{
-                    color: $clr-red;
+//-------------------------------------------------ESTIVA-------------------------------------------------------------------
+.quality{
+    &_wrapper {
+        display: flex;
+        flex-direction: column;
+        max-width: 130rem;
+        margin: 0 auto;
+        background: url(/img/estiva_img/about_line.png);
+        background-repeat: no-repeat;
+        background-position: top;
+        background-position: center;
+        z-index: 0;
+        top: -150px;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    &_content{
+        margin-top: 12rem;
+    }
+    &_text {
+        padding: 0 3rem;
+        padding-bottom: 10rem;
+        .quality_title {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            h1 {
+                font-size: 2rem;
+            }
+        }
+        &_content {
+            
+            border-bottom: 1px solid rgba($color: #000000, $alpha: 0.1);
+            h1 {
+                font-size: 3.5rem;
+                font-weight: 600;
+            }
+            p {
+                color: rgba($color: #000000, $alpha: 0.7);
+                margin: 2rem 0;
+            }
+        }
+        &_discover{
+            display: flex;
+            flex-direction: row;
+            .discover_button {
+                margin: 2.5rem 0;
+                padding: 1rem 2rem;
+                font-weight: 600;
+            }
+            .experience_information {  
+                display: flex;
+                gap: 2rem;
+                h1{
+                    color:$clr-red;
+                }
+                &_text {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 0.5rem;
+                    p {
+                        font-size: 1.75rem;
+                    }
                 }
             }
-            h4{
-                color: $clr-red;
+        }   
+    }
+
+    &_content_img{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            .image_about {
+                margin-top: -10rem;
+                z-index: 2;
+                width: 90%;
+                position: absolute;
+                rotate: 180deg;
+                justify-content: end;
+            }
+            .bg_about {
+                margin-top: -10rem;
+                z-index: -1;
+                left: 0;
+                width: 100%;
+                margin-right: -6rem;
+                transform: scaleX(-1);
+
+            }
+    }
+    @include mediaQuery($desktop){
+        
+        .quality{
+            
+            &_text_content{
+                padding-right: 8rem;
+            }
+
+            &_content{
+                display: flex;
+                flex-direction: row;
+            }
+            &_content_img{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+                img{
+                    width: unset;
+                }
+                .image_about {
+                    z-index: 2;
+                    position: absolute;
+                    rotate: 180deg;
+                    justify-content: end;
+                    margin-left: -19rem;
+                }
+                .bg_about {
+                    z-index: -1;
+                    left: 0;
+                    margin-right: -6rem;
+                    transform: scaleX(-1);
+    
+                }
             }
         }
     }
 }
 
+
 .strength{
-    &_wrapper{
-        background-image: url(/estiva_img/feature_bg_2.png);   
-        padding-top: 10rem;
-        padding-bottom: 10rem;
-        padding-left: 3rem;
-        padding-right: 3rem;
+    background: $clr-dark;
+    &_wrapper {
+        padding: 8rem 3rem;
+        background-image: url(/img/estiva_img/feature_bg_2.png);
+        background-size: cover;
+        background-position: center;
+    }  
         .strength_content{
             display: flex;
             flex-direction: column;
-            
-            &_text{
-                h5{
-                    text-align: center;
-                    margin-bottom: 2rem;
-                }
-                .end{
-                    text-align: center;
-                    h3{
-                        margin: 2rem;
-                    }
-                }
-            }
+            color: $clr-light;          
             &_img{
                 display: flex;
                 flex-direction: column;
                 text-align: center;
+                gap: 2rem;
+
+                img{
+                    transition: 0.5s ease;
+                }
+                
+                h2{
+                    margin:3rem ;
+                }
+
 
                 .img_cards:first-child{
-                    border: right 1px;;
-                    border-right-style: dashed;
+                    margin-top: 5rem;
+                    border-right: 1px dashed;
+
                 }
 
                 .img_cards:nth-child(2){
-                    border: right 1px;;
-                    border-right-style: dashed;
+                    margin-top: 5rem;
+                    border-right: 1px dashed;
+                    
                 }
-                img{
-                    padding: 2rem;
+                .img_cards:last-child{
+                    margin-top: 5rem;
                 }
-                h2{
-                    padding: 2rem;
-                }
+
+        }
+    }
+    .img_cards{
+        &:hover {
+                img {
+                    transform: rotateY(180deg);
+                    transition: 0.5s ease;
+                }   
+        }
+    }
+    &_text {
+        color: $clr-light;
+        text-align: center;
+        p {
+            color: $clr-light;
+        }
+        &_header {
+            margin: 2rem 0;
+            h1 {
+                font-size: 3rem;
+            }
+        }
+        &_title {
+            display: flex; 
+            gap: 0.5rem;
+            justify-content: center;
+        }
+
+
+    }
+    @include mediaQuery($desktop){
+        .strength_content_img{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+        .img_cards{
+            width: 22%;
+            padding: 2.5rem;
+            p{
+                line-height: 3rem;
+            }
+        }
+        .strength_text_content{
+            margin:0 60rem;
+        }
+    }
+}
+
+.testimonial{
+    background:#faf7f2;
+    &_wrapper {
+        padding-top: 10rem;
+        background-image: url(/img/estiva_img/feature_bg_2.png);
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        flex-direction: column;
+        max-width: 130rem;
+        margin: 0 auto;
+    } 
+    &_text {
+        padding-left: 1rem;
+        padding-right: 5rem;
+        padding-bottom: 10rem;
+        .testimonial_title {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            h1 {
+                font-size: 2rem;
+            }
+        }
+        &_content {
+            h1 {
+                font-size: 3.5rem;
+                font-weight: 600;
+            }
+            p {
+                color: rgba($color: #000000, $alpha: 0.7);
+                margin: 2rem 0;
             }
         }
     }
-
-} 
+}
