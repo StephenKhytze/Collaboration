@@ -2803,7 +2803,7 @@ body {
   position: relative;
   width: 100%;
   background: #ffffff;
-  z-index: 9999;
+  z-index: 99999;
   transition: all 0.25s ease;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 24px;
 }
