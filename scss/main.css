@@ -2800,6 +2800,7 @@ body {
 }
 
 .header {
+  position: relative;
   width: 100%;
   background: #ffffff;
   z-index: 9999;
