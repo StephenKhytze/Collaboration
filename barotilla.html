@@ -51,7 +51,7 @@
                                         <a href="javascript:void(0)">HOME<span>+</span></a>
                                         <div class="header_nav_tabs">
                                             <ul>
-                                                <li><a href=""><i class="fa-solid fa-utensils"></i>Home Restaurant</a></li>
+                                                <li><a href="/garrovillo.html"><i class="fa-solid fa-utensils"></i>Home Restaurant</a></li>
                                             </ul>
                                         </div>
                                     </li>
@@ -60,7 +60,7 @@
                                         <a href="javascript:void(0)">PAGES<span>+</span></a>
                                         <div class="header_nav_tabs">
                                             <ul>
-                                                <li><a href=""><i class="fa-solid fa-utensils"></i>About Us</a></li>
+                                                <li><a href="/estiva.html"><i class="fa-solid fa-utensils"></i>About Us</a></li>
                                                 <li><a href=""><i class="fa-solid fa-utensils"></i>Restaurant Food Menu</a></li>
                                             </ul>
                                         </div>
@@ -69,7 +69,7 @@
                                         <a href="javascript:void(0)">PORTFOLIO<span>+</span></a>
                                         <div class="header_nav_tabs">
                                             <ul>
-                                                <li><a href=""><i class="fa-solid fa-utensils"></i>Four Columns Rectangular</a></li>
+                                                <li><a href="/barotilla.html"><i class="fa-solid fa-utensils"></i>Four Columns Rectangular</a></li>
                                             </ul>
                                         </div>
                                     </li>
@@ -77,7 +77,7 @@
                                         <a href="javascript:void(0)">BLOG<span>+</span></a>
                                         <div class="header_nav_tabs">
                                             <ul>
-                                                <li><a href=""><i class="fa-solid fa-utensils"></i>Blog Sidebar Right</a></li>
+                                                <li><a href="/diangkinay.html"><i class="fa-solid fa-utensils"></i>Blog Sidebar Right</a></li>
                                             </ul>
                                         </div>
                                     </li>
@@ -104,26 +104,22 @@
     <section class="lb__diner">
        
         <div class="lb__diner_container">
+            
+            <div class="categories">
+                <button class="category-btn" data-category="all">Show All</button>
+                <button class="category-btn" data-category="breakfast">Breakfast</button>
+                <button class="category-btn" data-category="dessert">Dessert</button>
+                <button class="category-btn" data-category="lunch">Lunch</button>
+                <button class="category-btn" data-category="dinner">Dinner</button>
+              </div>
+
             <div class="lb__diner__wrapper">
 
-                <div class="lb__diner__holder">
-                    <div class="lb__diner__food" id="lb__diner__breakfast">
-                        <img src="./img/Pizzer - Fast Food Restaurant Joomla 5 and Joomla 4 Template-325135 - 8_20_2024 3-10-15 PM/5_600x400.jpg" alt="">
-                        <div class="lb__diner__text">
-                            <h4 onclick="lb__blur()">ZOOM</h4>
-                            <h5><a href="">VIEW</a></h5>
-                        </div>
-                    </div>
-                    <div class="lb__diner__hover">
-                        <h4><a href="">Combo Shrimp Chicken</a></h4>
-                        <p>breakfast</p>
-                    </div>
-                </div>
-                <div class="lb__diner__holder">
+                <div class="lb__diner__holder" data-category="breakfast">
                 <div class="lb__diner__food" id="lb__diner__breakfast">
-                    <img src="./img/Pizzer - Fast Food Restaurant Joomla 5 and Joomla 4 Template-325135 - 8_20_2024 3-10-15 PM/5_600x400.jpg" alt="">
+                    <img src="./img/barotilla_img/2_600x400.jpg" alt="">
                     <div class="lb__diner__text">
-                        <h4><a href="">ZOOM</a></h4>
+                        <h4 class="openPopupBtn" data-popup="popup1">ZOOM</h4>
                         <h5><a href="">VIEW</a></h5>
                     </div>
                 </div>
@@ -132,134 +128,147 @@
                         <p>breakfast</p>
                     </div>
                 </div>
-                <div class="lb__diner__holder">
-                <div class="lb__diner__food" id="lb__diner__breakfast">
-                    <img src="./img/Pizzer - Fast Food Restaurant Joomla 5 and Joomla 4 Template-325135 - 8_20_2024 3-10-15 PM/5_600x400.jpg" alt="">
+                <div class="lb__diner__holder" data-category="lunch">
+                <div class="lb__diner__food" id="lb__diner__lunch">
+                    <img src="./img/barotilla_img/8_600x400.jpg" alt="">
                     <div class="lb__diner__text">
-                        <h4><a href="">ZOOM</a></h4>
+                         <h4 class="openPopupBtn" data-popup="popup2">ZOOM</h4>
                         <h5><a href="">VIEW</a></h5>
                     </div>
                 </div>
                     <div class="lb__diner__hover">
-                        <h4><a href="">Combo Shrimp Chicken</a></h4>
-                        <p>breakfast</p>
+                        <h4><a href="">Faroe Islands Salmon</a></h4>
+                        <p>lunch</p>
                     </div>
                 </div>
-                <div class="lb__diner__holder">
-                <div class="lb__diner__food" id="lb__diner__breakfast">
-                    <img src="./img/Pizzer - Fast Food Restaurant Joomla 5 and Joomla 4 Template-325135 - 8_20_2024 3-10-15 PM/5_600x400.jpg" alt="">
+                <div class="lb__diner__holder" data-category="dinner">
+                <div class="lb__diner__food" id="lb__diner__dinner">
+                    <img src="./img/barotilla_img/7_600x400.jpg" alt="">
                     <div class="lb__diner__text">
-                        <h4><a href="">ZOOM</a></h4>
+                         <h4 class="openPopupBtn" data-popup="popup3">ZOOM</h4>
                         <h5><a href="">VIEW</a></h5>
                     </div>
                 </div>
                     <div class="lb__diner__hover">
-                        <h4><a href="">Combo Shrimp Chicken</a></h4>
-                        <p>breakfast</p>
+                        <h4><a href="">Veal Chop Parmigiana</a></h4>
+                        <p>dinner</p>
                     </div>
                 </div>
-                <div class="lb__diner__holder">
-                <div class="lb__diner__food" id="lb__diner__breakfast">
-                    <img src="./img/Pizzer - Fast Food Restaurant Joomla 5 and Joomla 4 Template-325135 - 8_20_2024 3-10-15 PM/5_600x400.jpg" alt="">
+                <div class="lb__diner__holder" data-category="breakfast,dessert,lunch">
+                <div class="lb__diner__food" id="lb__diner__breakfast_desserts_lunch">
+                    <img src="./img/barotilla_img/6_600x400.jpg" alt="">
                     <div class="lb__diner__text">
-                        <h4><a href="">ZOOM</a></h4>
+                         <h4 class="openPopupBtn" data-popup="popup4">ZOOM</h4>
                         <h5><a href="">VIEW</a></h5>
                     </div>
                 </div>
                     <div class="lb__diner__hover">
-                        <h4><a href="">Combo Shrimp Chicken</a></h4>
+                        <h4><a href="">Manhattan Clam Cow</a></h4>
                         <p>breakfast</p>
                     </div>
                 </div>
-                <div class="lb__diner__holder">
-                <div class="lb__diner__food" id="lb__diner__breakfast">
-                    <img src="./img/Pizzer - Fast Food Restaurant Joomla 5 and Joomla 4 Template-325135 - 8_20_2024 3-10-15 PM/5_600x400.jpg" alt="">
+                <div class="lb__diner__holder" data-category="breakfast,dessert">
+                <div class="lb__diner__food" id="lb__diner__breakfast_desserts">
+                    <img src="./img/barotilla_img/5_600x400.jpg" alt="">
                     <div class="lb__diner__text">
-                        <h4><a href="">ZOOM</a></h4>
+                         <h4 class="openPopupBtn" data-popup="popup5">ZOOM</h4>
                         <h5><a href="">VIEW</a></h5>
                     </div>
                 </div>
                     <div class="lb__diner__hover">
-                        <h4><a href="">Combo Shrimp Chicken</a></h4>
+                        <h4><a href="">French Onion Soup</a></h4>
                         <p>breakfast</p>
                     </div>
                 </div>
-                <div class="lb__diner__holder">
-                <div class="lb__diner__food" id="lb__diner__breakfast">
-                    <img src="./img/Pizzer - Fast Food Restaurant Joomla 5 and Joomla 4 Template-325135 - 8_20_2024 3-10-15 PM/5_600x400.jpg" alt="">
+                <div class="lb__diner__holder" data-category="breakfast,lunch">
+                <div class="lb__diner__food" id="lb__diner__breakfast_lunch">
+                    <img src="./img/barotilla_img/4_600x400.jpg" alt="">
                     <div class="lb__diner__text">
-                        <h4><a href="">ZOOM</a></h4>
+                         <h4 class="openPopupBtn" data-popup="popup6">ZOOM</h4>
                         <h5><a href="">VIEW</a></h5>
                     </div>
                 </div>
                     <div class="lb__diner__hover">
-                        <h4><a href="">Combo Shrimp Chicken</a></h4>
+                        <h4><a href="">Super Masters Pizza</a></h4>
                         <p>breakfast</p>
                     </div>
                 </div>
-                <div class="lb__diner__holder">
-                <div class="lb__diner__food" id="lb__diner__breakfast">
-                    <img src="./img/Pizzer - Fast Food Restaurant Joomla 5 and Joomla 4 Template-325135 - 8_20_2024 3-10-15 PM/5_600x400.jpg" alt="">
+                <div class="lb__diner__holder" data-category="lunch,dinner">
+                <div class="lb__diner__food" id="lb__diner__dinner_lunch">
+                    <img src="./img/barotilla_img/3_600x400.jpg" alt="">
                     <div class="lb__diner__text">
-                        <h4><a href="">ZOOM</a></h4>
+                         <h4 class="openPopupBtn" data-popup="popup7">ZOOM</h4>
                         <h5><a href="">VIEW</a></h5>
                     </div>
                 </div>
                     <div class="lb__diner__hover">
-                        <h4><a href="">Combo Shrimp Chicken</a></h4>
-                        <p>breakfast</p>
+                        <h4><a href="">Lump Crab Cake Food</a></h4>
+                        <p>dinner, lunch</p>
                     </div>
                 </div>
-                <div class="lb__diner__holder">
-                <div class="lb__diner__food" id="lb__diner__breakfast">
-                    <img src="./img/Pizzer - Fast Food Restaurant Joomla 5 and Joomla 4 Template-325135 - 8_20_2024 3-10-15 PM/5_600x400.jpg" alt="">
+                <div class="lb__diner__holder" data-category="dessert">
+                <div class="lb__diner__food" id="lb__diner__desserts">
+                    <img src="./img/barotilla_img/1_600x400.jpg" alt="">
                     <div class="lb__diner__text">
-                        <h4><a href="">ZOOM</a></h4>
+                         <h4 class="openPopupBtn" data-popup="popup8">ZOOM</h4>
                         <h5><a href="">VIEW</a></h5>
                     </div>
                 </div>
                     <div class="lb__diner__hover">
-                        <h4><a href="">Combo Shrimp Chicken</a></h4>
-                        <p>breakfast</p>
+                        <h4><a href="">Traditional Turkish Delight</a></h4>
+                        <p>desserts</p>
                     </div>
                 </div>
-                <div class="lb__diner__holder">
-                <div class="lb__diner__food" id="lb__diner__breakfast">
-                    <img src="./img/Pizzer - Fast Food Restaurant Joomla 5 and Joomla 4 Template-325135 - 8_20_2024 3-10-15 PM/5_600x400.jpg" alt="">
+                <div class="lb__diner__holder" data-category="lunch,dinner">
+                <div class="lb__diner__food" id="lb__diner__dinner_lunch">
+                    <img src="./img/barotilla_img/9_600x400.jpg" alt="">
                     <div class="lb__diner__text">
-                        <h4><a href="">ZOOM</a></h4>
+                         <h4 class="openPopupBtn" data-popup="popup9">ZOOM</h4>
                         <h5><a href="">VIEW</a></h5>
                     </div>
                 </div>
                     <div class="lb__diner__hover">
-                        <h4><a href="">Combo Shrimp Chicken</a></h4>
-                        <p>breakfast</p>
+                        <h4><a href="">Chief's Sicilian Pasta</a></h4>
+                        <p>dinner, lunch</p>
                     </div>
                 </div>
-                <div class="lb__diner__holder">
-                <div class="lb__diner__food" id="lb__diner__breakfast">
-                    <img src="./img/Pizzer - Fast Food Restaurant Joomla 5 and Joomla 4 Template-325135 - 8_20_2024 3-10-15 PM/5_600x400.jpg" alt="">
+                <div class="lb__diner__holder" data-category="breakfast,dessert">
+                <div class="lb__diner__food" id="lb__diner__breakfast_desserts">
+                    <img src="./img/barotilla_img/10_600x400.jpg" alt="">
                     <div class="lb__diner__text">
-                        <h4><a href="">ZOOM</a></h4>
+                         <h4 class="openPopupBtn" data-popup="popup10">ZOOM</h4>
                         <h5><a href="">VIEW</a></h5>
                     </div>
                 </div>
                     <div class="lb__diner__hover">
-                        <h4><a href="">Combo Shrimp Chicken</a></h4>
-                        <p>breakfast</p>
+                        <h4><a href="">Fresh Chicken Masala</a></h4>
+                        <p>breakfast, desserts</p>
                     </div>
                 </div>
-                <div class="lb__diner__holder">
+                <div class="lb__diner__holder" data-category="breakfast">
                 <div class="lb__diner__food" id="lb__diner__breakfast">
-                    <img src="./img/Pizzer - Fast Food Restaurant Joomla 5 and Joomla 4 Template-325135 - 8_20_2024 3-10-15 PM/5_600x400.jpg" alt="">
+                    <img src="./img/barotilla_img/11_600x400.jpg" alt="">
                     <div class="lb__diner__text">
-                        <h4><a href="">ZOOM</a></h4>
+                         <h4 class="openPopupBtn" data-popup="popup11">ZOOM</h4>
                         <h5><a href="">VIEW</a></h5>
                     </div>
                 </div>
                     <div class="lb__diner__hover">
-                        <h4><a href="">Combo Shrimp Chicken</a></h4>
+                        <h4><a href="">Tostada Francesa Simple</a></h4>
                         <p>breakfast</p>
+                    </div>
+                </div>
+                <div class="lb__diner__holder" data-category="lunch">
+                <div class="lb__diner__food" id="lb__diner__lunch">
+                    <img src="./img/barotilla_img/12_600x400.jpg" alt="">
+                    <div class="lb__diner__text">
+                         <h4 class="openPopupBtn" data-popup="popup12">ZOOM</h4>
+                        <h5><a href="">VIEW</a></h5>
+                    </div>
+                </div>
+                    <div class="lb__diner__hover">
+                        <h4><a href="">Pollo Ala Parrilla</a></h4>
+                        <p>lunch</p>
                     </div>
                 </div>
                 
@@ -267,14 +276,113 @@
                     
 
             </div>
+            
         </div>
         
-        <div class="lb__blurbg" id="lb__popup">
+       <!-- <div class="lb__popup__img">
+        <div class="lb__blurbg" id="lb__popup1">
             <div class="lb__diner__blured" id="lb__blur">
-                <img src="./img/Pizzer - Fast Food Restaurant Joomla 5 and Joomla 4 Template-325135 - 8_20_2024 3-10-15 PM/5_600x400.jpg" alt="" id="lb__food1">
+                <span class="lb__close">&times;</span>
+                <img src="./img/barotilla_img/2_600x400.jpg" alt="" id="lb__food1">
             </div>
         </div>
+       </div> -->
+  <!-- The Modals -->
+  <div>
+    <div id="popup1" class="popup">
+        <div class="popup-content">
+          <span class="close">&times;</span>
+          <img src="./img/barotilla_img/2_600x400.jpg" alt="">
+        </div>
+      </div>
     
+      <div id="popup2" class="popup">
+        <div class="popup-content">
+          <span class="close">&times;</span>
+          <img src="./img/barotilla_img/8_600x400.jpg" alt="">
+        </div>
+      </div>
+    
+      <div id="popup3" class="popup">
+        <div class="popup-content">
+          <span class="close">&times;</span>
+          <img src="./img/barotilla_img/7_600x400.jpg" alt="">
+        </div>
+      </div>
+    
+      <div id="popup4" class="popup">
+        <div class="popup-content">
+          <span class="close">&times;</span>
+          <img src="./img/barotilla_img/6_600x400.jpg" alt="">
+        </div>
+      </div>
+    
+      <div id="popup5" class="popup">
+        <div class="popup-content">
+          <span class="close">&times;</span>
+          <img src="./img/barotilla_img/5_600x400.jpg" alt="">
+        </div>
+      </div>
+    
+      <div id="popup6" class="popup">
+        <div class="popup-content">
+          <span class="close">&times;</span>
+          <img src="./img/barotilla_img/4_600x400.jpg" alt="">
+        </div>
+      </div>
+    
+      <div id="popup7" class="popup">
+        <div class="popup-content">
+          <span class="close">&times;</span>
+          <img src="./img/barotilla_img/3_600x400.jpg" alt="">
+        </div>
+      </div>
+    
+      <div id="popup8" class="popup">
+        <div class="popup-content">
+          <span class="close">&times;</span>
+          <img src="./img/barotilla_img/1_600x400.jpg" alt="">
+        </div>
+      </div>
+    
+      <div id="popup9" class="popup">
+        <div class="popup-content">
+          <span class="close">&times;</span>
+          <img src="./img/barotilla_img/9_600x400.jpg" alt="">
+        </div>
+      </div>
+    
+      <div id="popup10" class="popup">
+        <div class="popup-content">
+          <span class="close">&times;</span>
+          <img src="./img/barotilla_img/10_600x400.jpg" alt="">
+        </div>
+      </div>
+    
+      <div id="popup11" class="popup">
+        <div class="popup-content">
+          <span class="close">&times;</span>
+          <img src="./img/barotilla_img/11_600x400.jpg" alt="">
+        </div>
+      </div>
+    
+      <div id="popup12" class="popup">
+        <div class="popup-content">
+          <span class="close">&times;</span>
+          <img src="./img/barotilla_img/12_600x400.jpg" alt="">
+        </div>
+      </div>
+    
+  </div>
+    
+    </section>
+
+
+    <section class="lb__floating__things">
+        <div class="lb__floating_food">
+            <img src="./img/barotilla_img/leaf_1.png" alt="">
+            <img src="./img/barotilla_img/chicken_1.png" alt="">
+        </div>
     </section>
 
     <footer class="footer">
