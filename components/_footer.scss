@@ -49,6 +49,12 @@
                     padding: 1.5rem 2.5rem;
                     border-radius: 10rem;
                     max-width: 26rem;
+                    box-shadow: 1px 1px 16px 1px rgba($color: #eb0029, $alpha: 0);
+                    transition: 0.5s ease;
+                    &:focus {
+                        box-shadow: 1px 1px 16px 1px rgba($color: #eb0029, $alpha: 0.5);
+                        outline: none;
+                    }
                 }
                 a {
                     max-width: max-content;

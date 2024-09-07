@@ -1,9 +1,15 @@
 .header {
+    position: relative;
     width: 100%;
     background: $clr-light;
-    z-index: 99;
-    transition: 0.25s ease;
+    z-index: 9999;
+    transition: all 0.25s ease;
     box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 24px;
+    &.down {
+        opacity: 0;
+        animation: header_mobile 0.75s ease;
+        animation-fill-mode: forwards
+    }
     &_wrapper {
         @include centerAll;
         padding: 1rem;
@@ -155,17 +161,12 @@
                 &_tabs {
                     margin-top: 2rem;
                     margin-left: 1.35rem;
-                    background: $clr-light;
-                    display: none;
-                    &.active {
-                        display: flex;
-                        flex-direction: column;
-                        ul {
-                            opacity: 1;
-                        }
-                    }
+                    background: transparent;
+                    display: flex;
+                    position: absolute;
                     ul {
                         opacity: 0;
+                        max-width: 100%;
                         transition: 0.25s ease;
                         li {
                             a {
@@ -203,6 +204,11 @@
         }
     }
     @include mediaQuery($desktop) {
+        &.down {
+            opacity: 0;
+            animation: header_desktop 0.75s ease;
+            animation-fill-mode: forwards
+        }
         &_wrapper {
             padding: 0;
         }
@@ -234,8 +240,6 @@
                             }
                         }
                         &_tabs {
-                            z-index: 1;
-                            display: none;
                             position: absolute;
                             width: max-content;
                             padding: 1.75rem 3rem;
@@ -258,5 +262,28 @@
                 }
             }
         }
+    }
+}
+
+@keyframes header_desktop {
+    0% {
+        top: -50rem;
+        opacity: 0;
+    }
+    100% {
+        top: 0;
+        opacity: 1;
+        position: fixed;
+    }
+}
+
+@keyframes header_mobile {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        top: 0;
+        position: fixed;
     }
 }
