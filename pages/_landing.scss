@@ -1721,9 +1721,34 @@
                 }
             }
             &:nth-child(4){
-                margin-bottom: 20rem;
                 .inner_bg{
                     background-image: url("../img/Blog\ Side\ Bar\ Right/blog food 4.jpg");
+                }
+            }
+            &:nth-child(5){
+                .inner_bg{
+                    background-image: url("../img/Blog\ Side\ Bar\ Right/blog food 5.jpg");
+                }
+            }
+            &:nth-child(6){
+                .inner_bg{
+                    background-image: url("../img/Blog\ Side\ Bar\ Right/blog food 6.jpg");
+                }
+            }
+            &:nth-child(7){
+                .inner_bg{
+                    background-image: url("../img/Blog\ Side\ Bar\ Right/blog food 7.jpg");
+                }
+            }
+            &:nth-child(8){
+                .inner_bg{
+                    background-image: url("../img/Blog\ Side\ Bar\ Right/blog food 8.jpg");
+                }
+            }
+            &:nth-child(9){
+                margin-bottom: 20rem;
+                .inner_bg{
+                    background-image: url("../img/Blog\ Side\ Bar\ Right/blog food 9.jpg");
                 }
             }
         }
