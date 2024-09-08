@@ -281,6 +281,7 @@ body {
   left: 0;
 }
 .home_banner .banner_slider_content {
+  position: relative;
   padding: 4rem 4rem;
   z-index: 990;
 }
@@ -294,7 +295,18 @@ body {
 .home_banner .banner_slider_text h1 span {
   color: #ff9d2d;
 }
+.home_banner .banner_slider_button {
+  display: flex;
+  gap: 2.5rem;
+  margin-top: 2.5rem;
+}
 .home_banner .banner_slider_button a {
+  font-size: 1.25rem;
+  font-weight: 600;
+  padding: 1.5rem;
+  background: #ff9d2d;
+}
+.home_banner .banner_slider_button a:last-child {
   background: #eb0029;
 }
 
@@ -2847,19 +2859,20 @@ body {
 }
 .header_text {
   width: 100%;
-  height: 100%;
   position: absolute;
-  display: none;
+  max-height: 0rem;
+  overflow: hidden;
+  transition: 0.5s ease;
+  top: 10.5rem;
+  left: 0;
 }
 .header_text ul {
   display: flex;
   gap: 1rem;
 }
 .header_text.open {
-  top: 10.5rem;
-  left: 0;
-  display: block;
-  position: absolute;
+  max-height: 40rem;
+  transition: 0.5s ease;
 }
 .header_text_top {
   width: 100%;
@@ -2916,14 +2929,7 @@ body {
   justify-content: space-between;
   background: #ffffff;
   width: 100%;
-  padding: 0 2rem;
-  padding-left: 6rem;
-  position: absolute;
-  display: none;
-}
-.header_text_bottom .text_bottom .header_nav.open {
-  padding: 2rem 2.5rem;
-  display: block;
+  padding: 2.25rem 2rem;
 }
 .header_text_bottom .text_bottom .header_nav ul {
   align-items: center;
@@ -2964,17 +2970,25 @@ body {
   background: #eb0029;
   color: #ffffff;
 }
+.header_text_bottom .text_bottom .header_nav_buttons {
+  width: 100%;
+}
 .header_text_bottom .text_bottom .header_nav_tabs {
-  margin-top: 2rem;
-  margin-left: 1.35rem;
-  background: transparent;
+  padding-left: 1.35rem;
+  max-width: 100%;
+  background: #ffffff;
   display: flex;
-  position: absolute;
+  position: block;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+}
+.header_text_bottom .text_bottom .header_nav_tabs.active {
+  margin-top: 2rem;
+  max-height: 8rem;
 }
 .header_text_bottom .text_bottom .header_nav_tabs ul {
-  opacity: 0;
   max-width: 100%;
-  transition: 0.25s ease;
 }
 .header_text_bottom .text_bottom .header_nav_tabs ul li a i {
   color: #eb0029;
@@ -3017,8 +3031,11 @@ body {
     margin: 1rem 6.75rem 1rem 12rem;
   }
   .header_text {
+    max-height: -moz-min-content;
+    max-height: min-content;
     display: unset;
     position: static;
+    top: 0;
   }
   .header_text_top {
     display: block;
@@ -3037,7 +3054,12 @@ body {
   .header_text_bottom .text_bottom .header_nav ul:nth-child(2) {
     display: flex;
   }
+  .header_text_bottom .text_bottom .header_nav_buttons {
+    margin-left: 5rem;
+    width: 50%;
+  }
   .header_text_bottom .text_bottom .header_nav_tabs {
+    display: none;
     position: absolute;
     width: -moz-max-content;
     width: max-content;
