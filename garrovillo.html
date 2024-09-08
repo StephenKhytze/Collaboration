@@ -203,6 +203,15 @@
                     </div>
                 </div>
             </div>
+            <div class="slider_nav_container">
+                <img src="/img/home/dot_line.png" alt="">
+                <div id="home_banner_nav" class="tns-nav">
+                    <div class="tns-nav-buttons" data-nav="0" aria-controls="tns1"><a href="javascript:void(0)">1</a></div>
+                    <div class="tns-nav-buttons" data-nav="1" aria-controls="tns1"><a href="javascript:void(0)">2</a></div>
+                    <div class="tns-nav-buttons" data-nav="2" aria-controls="tns1"><a href="javascript:void(0)">3</a></div> 
+                </div>
+                <img src="/img/home/dot_line_2.png" alt="">
+            </div>
         </div>
     </section>
 
@@ -1313,9 +1322,16 @@
             controls: false,
             speed: 1000,
             autoplay: true,
-            autoplayTimeout: 8000,
+            autoplayTimeout: 9000,
             nav: false,
-            autoplayButtonOutput: false
+            navContainer: '#home_banner_nav',
+            navAsThumbnails: false,
+            autoplayButtonOutput: false,
+            responsive: {
+                760: {
+                    nav: true
+                }
+            }
         })
     </script>
 </body>

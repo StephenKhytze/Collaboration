@@ -192,6 +192,9 @@ body {
   background: #eb0029;
 }
 
+.home_banner {
+  position: relative;
+}
 .home_banner #banner-tab-1 {
   background-image: url(/img/home/slider-1.jpg);
 }
@@ -329,6 +332,9 @@ body {
 .home_banner .banner_slider_button a:last-child {
   background: #eb0029;
 }
+.home_banner .slider_nav_container {
+  display: none;
+}
 @media screen and (min-width: 1080px) {
   .home_banner .banner_slider {
     height: 80rem;
@@ -345,6 +351,21 @@ body {
     top: 50%;
     left: 9rem;
     transform: translateY(-50%);
+  }
+  .home_banner .banner_slider_img_container .food_bg_item:first-child {
+    gap: 20rem;
+    transform: translate(-27rem, -17rem);
+  }
+  .home_banner .banner_slider_img_container .food_bg_item:first-child img:first-child, .home_banner .banner_slider_img_container .food_bg_item:first-child img:last-child {
+    width: 15rem;
+  }
+  .home_banner .banner_slider_img_container .food_bg_item img:first-child {
+    top: 0;
+    left: 0;
+  }
+  .home_banner .banner_slider_img_container .food_bg_item img:nth-child(2) {
+    top: 0;
+    left: 0;
   }
   .home_banner .banner_slider_content {
     padding: 0 40rem;
@@ -363,6 +384,36 @@ body {
   .home_banner .banner_slider_button a {
     font-size: 1.5rem;
     padding: 2.25rem 4rem;
+  }
+  .home_banner .slider_nav_container {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    left: 17.5rem;
+    transform: translate(0, -50%);
+    gap: 1.5rem;
+  }
+  .home_banner #home_banner_nav {
+    flex-direction: column;
+  }
+  .home_banner #home_banner_nav .tns-nav-buttons {
+    border-top: 1px solid #ffffff;
+    border-bottom: 1px solid #ffffff;
+  }
+  .home_banner #home_banner_nav .tns-nav-buttons.tns-nav-active {
+    border-top: 1px solid #eb0029;
+    border-bottom: 1px solid #eb0029;
+    transform: rotate(0);
+  }
+  .home_banner #home_banner_nav .tns-nav-buttons.tns-nav-active a {
+    background: #eb0029;
+    color: #ffffff;
+  }
+  .home_banner #home_banner_nav .tns-nav-buttons a {
+    background: #ffffff;
+    color: #eb0029;
+    font-weight: 400;
   }
 }
 
