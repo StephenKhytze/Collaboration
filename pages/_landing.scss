@@ -2188,6 +2188,27 @@
 
 
 //-------------------------------------------------ESTIVA-------------------------------------------------------------------
+.about_banner{
+    .about_banner_wrapper{
+        background-image: url(/img/estiva_img/breadcrumbs-bg.jpg);
+        width: 100%;
+        height: 37rem;
+        background-position: center;
+        background-size: cover;
+        }
+    &_content{
+        color: $clr-light;
+        a{
+            color: $clr-red
+        }
+    }    
+    &_title{
+        span{
+            color: $clr-yellow;
+        }
+    }
+}
+
 .quality{
     &_wrapper {
         display: flex;

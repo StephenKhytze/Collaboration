@@ -2182,6 +2182,23 @@ body {
   }
 }
 
+.about_banner .about_banner_wrapper {
+  background-image: url(/img/estiva_img/breadcrumbs-bg.jpg);
+  width: 100%;
+  height: 37rem;
+  background-position: center;
+  background-size: cover;
+}
+.about_banner_content {
+  color: #ffffff;
+}
+.about_banner_content a {
+  color: #eb0029;
+}
+.about_banner_title span {
+  color: #ff9d2d;
+}
+
 .quality_wrapper {
   display: flex;
   flex-direction: column;
