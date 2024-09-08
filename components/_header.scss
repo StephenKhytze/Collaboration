@@ -108,30 +108,9 @@
                 width: 100%;
                 padding: 2.25rem 2rem;
                 ul {
-                    align-items: center;
                     font-weight: 600;
-                    &:first-child {
-                        position: relative;
-                        display: flex;
-                        align-items: start;
-                        flex-direction: column;
-                        gap: 3.5rem;
-                        li {
-                            a {
-                                height: 100%;
-                                transition: 0.15s ease;
-                                span {
-                                    font-size: 2rem;
-                                    margin-left: 6px;
-                                    color: $clr-red;
-                                }
-                                &:hover {
-                                    color: $clr-red;
-                                }
-                            }
-                        }
-                    }
                     &:nth-child(2) {
+                        align-items: center;
                         display: none;
                         li {
                             &:first-child {
@@ -154,6 +133,25 @@
                 }
                 &_buttons {
                     width: 100%;
+                    position: relative;
+                    display: flex;
+                    align-items: start;
+                    flex-direction: column;
+                    gap: 1.5rem;
+                    li {
+                        a {
+                            height: 100%;
+                            transition: 0.15s ease;
+                            span {
+                                font-size: 2rem;
+                                margin-left: 6px;
+                                color: $clr-red;
+                            }
+                            &:hover {
+                                color: $clr-red;
+                            }
+                        }
+                    }
                 }
                 &_tabs {
                     padding-left: 1.35rem;
@@ -165,11 +163,14 @@
                     overflow: hidden;
                     transition: max-height 0.5s ease;
                     &.active {
-                        margin-top: 2rem;
-                        max-height: 8rem;
+                        max-height: 10rem;
                     }
                     ul {
+                        display: flex;
+                        flex-direction: column;
                         max-width: 100%;
+                        margin-top: 2rem;
+                        gap: 1.5rem;
                         li {
                             a {
                                 i {
@@ -224,6 +225,7 @@
             max-height: min-content;
             display: unset;
             position: static;
+            overflow: visible;
             top: 0;
             &_top {
                 display: block;
@@ -236,28 +238,43 @@
                         position: relative;
                         display: flex;
                         ul {
-                            &:first-child {
-                                flex-direction: row;
-                            }
                              &:nth-child(2) {
                                 display: flex;
                             }
                         }
                         &_buttons {
+                            flex-direction: row;
+                            gap: 3.5rem;
                             margin-left: 5rem;
                             width: 50%;
                         }
                         &_tabs {
-                            display: none;
-                            position: absolute;
+                            padding-left: 0;
                             width: max-content;
-                            padding: 1.75rem 3rem;
-                            top: 3.8rem;
-                            margin-left: 0;
+                            background: $clr-light;
+                            top: 6.5rem;
+                            position: absolute;
+                            overflow: hidden;
+                            max-height: 0rem;
+                            box-shadow: none;
+                            transition: 0.5s ease;
                             &.active {
-                                ul {
-                                    display: flex;
-                                    flex-direction: column;
+                                max-height: 12rem;
+                                box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+                            }
+                            ul {
+                                display: flex;
+                                flex-direction: column;
+                                margin-top: 0;
+                                padding: 2.5rem 3rem;
+                                li {
+                                    display: block;
+                                    a {
+                                        i {
+                                            color: $clr-red;
+                                            margin-right: 0.75rem;
+                                        }
+                                    }
                                 }
                             }
                         }
