@@ -1,11 +1,32 @@
 .home_banner {
+    #banner-tab-1 {
+        background-image: url(/img/home/slider-1.jpg);
+    }
+    #banner-tab-2 {
+        background-image: url(/img/home/slider-2.jpg);
+    }
+    #banner-tab-3 {
+        background-image: url(/img/home/slider-3.jpg);
+    }
     .banner_slider {
         position: relative;
-        background-image: url(/img/home/slider-1.jpg);
         background-size: cover;
         background-position: center;
         background-position-y: bottom;
         height: 31rem;
+        overflow: hidden;
+        &.tns-slide-active {
+            .banner_slider_img, .banner_slider_content {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        &_img, &_content {
+            opacity: 0;
+            transform: translateX(100%);
+            transition: transform 1.5s ease;
+            transition-delay: 1s;
+        }
         &_img {
             position: absolute;
             overflow: hidden;
@@ -22,6 +43,7 @@
                         width: 45rem;
                         top: -12.5rem;
                         left: -15rem;
+                        z-index: 99;
                     }
                     &:nth-child(2) {
                         width: 45rem;
@@ -110,6 +132,50 @@
                 background: $clr-yellow;
                 &:last-child {
                     background: $clr-red;
+                }
+            }
+        }
+    }
+    @include mediaQuery($desktop) {
+        .banner_slider {
+            height: 80rem;
+            display: flex;
+            align-items: center;
+            &_img {
+                &_container {
+                    img {
+                        &:first-child {
+                            width: 55rem;
+                            top: -6rem;
+                            left: 26rem;
+                        }
+                        &:nth-child(2) {
+                            width: 90rem;
+                            top: 50%;
+                            left: 9rem;
+                            transform: translateY(-50%);
+                        }
+                    }
+                }
+            }
+            &_content {
+                padding: 0 40rem;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: start;
+            }
+            &_text {
+                h1 {
+                    font-size: 7rem;
+                    line-height: 1.2;
+                }
+            }
+            &_button {
+                margin-top: 4rem;
+                a {
+                    font-size: 1.5rem;
+                    padding: 2.25rem 4rem;
                 }
             }
         }

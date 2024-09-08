@@ -106,7 +106,7 @@
     <section class="home_banner">
         <div class="container">
             <div class="home_banner_wrapper">
-                <div class="banner_slider">
+                <div id="banner-tab-1" class="banner_slider">
                     <div class="banner_slider_img">
                         <div class="banner_slider_img_container">
                             <img src="/img/home/hero_shape_2.png" alt="">
@@ -130,6 +130,70 @@
                             <h1 class="font-heading">WE SERVE THE <br>
                                 TASTE, AS YOU <br>
                                 LIKE <span class="font-cursive">FOODS</span>         
+                                </h1>
+                            <div class="banner_slider_button">
+                                <a href="" class="btn font-heading">ORDER NOW</a>
+                                <a href="" class="btn font-heading">BROWSE MENU</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="banner-tab-2" class="banner_slider">
+                    <div class="banner_slider_img">
+                        <div class="banner_slider_img_container">
+                            <img src="/img/home/hero_shape_2.png" alt="">
+                            <img src="img/home/hero_shape_3.png" alt="">
+                            <div class="food_bg">
+                                <div class="food_bg_container">
+                                    <div class="food_bg_item">
+                                        <img src="/img/home/hero_shape_4.png" alt="">
+                                        <img src="/img/home/hero_shape_6.png" alt="">
+                                    </div>
+                                    <div class="food_bg_item">
+                                        <img src="/img/home/hero_shape_7.png" alt="">
+                                        <img src="/img/home/hero_shape_8.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="banner_slider_content">
+                        <div class="banner_slider_text">
+                            <h1 class="font-heading">YOU ALWAYS LIKE <br>
+                                TASTE OF OUR <br>
+                                FAST <span class="font-cursive">FOODS</span>         
+                                </h1>
+                            <div class="banner_slider_button">
+                                <a href="" class="btn font-heading">ORDER NOW</a>
+                                <a href="" class="btn font-heading">BROWSE MENU</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="banner-tab-3" class="banner_slider">
+                    <div class="banner_slider_img">
+                        <div class="banner_slider_img_container">
+                            <img src="/img/home/hero_shape_2.png" alt="">
+                            <img src="img/home/hero_shape_3.png" alt="">
+                            <div class="food_bg">
+                                <div class="food_bg_container">
+                                    <div class="food_bg_item">
+                                        <img src="/img/home/hero_shape_4.png" alt="">
+                                        <img src="/img/home/hero_shape_6.png" alt="">
+                                    </div>
+                                    <div class="food_bg_item">
+                                        <img src="/img/home/hero_shape_7.png" alt="">
+                                        <img src="/img/home/hero_shape_8.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="banner_slider_content">
+                        <div class="banner_slider_text">
+                            <h1 class="font-heading">WE PROVIDE BEST <br>
+                                BEHAVIOUR AND <br>
+                                YUMMY <span class="font-cursive">FOODS</span>
                                 </h1>
                             <div class="banner_slider_button">
                                 <a href="" class="btn font-heading">ORDER NOW</a>
@@ -1241,6 +1305,17 @@
                 center: false,
             }
           }
+        })
+
+        var home_banner = tns({
+            container: '.home_banner_wrapper',
+            items: 1,
+            controls: false,
+            speed: 1000,
+            autoplay: true,
+            autoplayTimeout: 8000,
+            nav: false,
+            autoplayButtonOutput: false
         })
     </script>
 </body>
