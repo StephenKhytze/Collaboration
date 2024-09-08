@@ -85,6 +85,7 @@
             }
         }
         &_content {
+            position: relative;
             padding: 4rem 4rem;
             z-index: 990;
         }
@@ -99,8 +100,17 @@
             }
         }
         &_button {
+            display: flex;
+            gap: 2.5rem;
+            margin-top: 2.5rem;
             a {
-                background: $clr-red;
+                font-size: 1.25rem;
+                font-weight: 600;
+                padding: 1.5rem;
+                background: $clr-yellow;
+                &:last-child {
+                    background: $clr-red;
+                }
             }
         }
     }
