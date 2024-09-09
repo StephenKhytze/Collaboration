@@ -7,7 +7,7 @@ burgerButton.addEventListener('click', () => {
     headerText.classList.toggle('open');
 });
 
-
+const scrollUp = document.querySelector('.scroll_up a');
 document.addEventListener('DOMContentLoaded', function () {
     const header = document.querySelector(".header");
     const offSet = header.offsetTop;
@@ -15,8 +15,10 @@ document.addEventListener('DOMContentLoaded', function () {
     window.addEventListener('scroll', () => {
         if (window.scrollY > 100) {
             header.classList.add('down')     
+            scrollUp.classList.add('visible')
         } else {
             header.classList.remove('down')
+            scrollUp.classList.remove('visible')
         }
     });
 });
@@ -38,3 +40,9 @@ document.querySelectorAll('.header_nav_buttons > li').forEach(li => {
     });
 });
 
+scrollUp.addEventListener('click', () => {
+    document.documentElement.scrollTo({
+        top: 0,
+        behavior: "smooth",
+    })
+})

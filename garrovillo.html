@@ -50,10 +50,10 @@
                             <div class="header_nav">
                                 <ul class="header_nav_buttons">
                                     <li>
-                                        <a href="javascript:void(0)">HOME<span>+</span></a>
+                                        <a href="javascript:void(0)" style="color: #eb0029;">HOME<span>+</span></a>
                                         <div class="header_nav_tabs">
                                             <ul>
-                                                <li><a href="/garrovillo.html"><i class="fa-solid fa-utensils"></i>Home Restaurant</a></li>
+                                                <li><a href="/garrovillo.html" style="color: #eb0029;"><i class="fa-solid fa-utensils"></i>Home Restaurant</a></li>
                                             </ul>
                                         </div>
                                     </li>
@@ -102,6 +102,12 @@
             </div>
         </div>
     </header>
+
+    <section class="scroll_up">
+            <div class="scroll_up_wrapper">
+                <a href="javascript:void(0)"><i class="fa-solid fa-arrow-up-long"></i></a>
+            </div>
+    </section>
 
     <section class="home_banner">
         <div class="container">
@@ -1261,9 +1267,9 @@
                 <div class="footer_end_text">
                     <p>Copyright © <a href="">Pizzer</a> Fast Foods & Restaurant. All Rights Reserved</p>
                     <div class="terms_conditions">
-                        <p>Privacy Policy</p>
+                        <a href="javascript:void(0)">Privacy Policy</a>
                         <span></span>
-                        <p>Terms & Conditions</p>
+                        <a href="javascript:void(0)">Terms & Conditions</a>
                     </div>
                 </div>
             </div>
@@ -1320,6 +1326,7 @@
             container: '.home_banner_wrapper',
             items: 1,
             controls: false,
+            controlsText: ['<i class="fa-solid fa-chevron-left"></i>', '<i class="fa-solid fa-chevron-right"></i>'],
             speed: 1000,
             autoplay: true,
             autoplayTimeout: 9000,
@@ -1329,7 +1336,9 @@
             autoplayButtonOutput: false,
             responsive: {
                 760: {
-                    nav: true
+                    controls: true,
+                    nav: true,
+                    mouseDrag: true,
                 }
             }
         })

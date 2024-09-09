@@ -254,6 +254,14 @@
                         }
                     }
                 }
+                .footer_contacts {
+                    a {
+                        transition: 0.5s ease;
+                        &:hover {
+                            color: $clr-red;
+                        }
+                    }
+                }
                 &_buttons {
                     h1 {
                         i {
@@ -297,6 +305,12 @@
                 }
                 .terms_conditions {
                     margin: 0;
+                    a {
+                        color: $clr-light;
+                        &:hover {
+                            color: $clr-red;
+                        }
+                    }
                 }
             }
         }
