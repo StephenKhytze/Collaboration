@@ -7,7 +7,7 @@ burgerButton.addEventListener('click', () => {
     headerText.classList.toggle('open');
 });
 
-
+const scrollUp = document.querySelector('.scroll_up a');
 document.addEventListener('DOMContentLoaded', function () {
     const header = document.querySelector(".header");
     const offSet = header.offsetTop;
@@ -15,8 +15,10 @@ document.addEventListener('DOMContentLoaded', function () {
     window.addEventListener('scroll', () => {
         if (window.scrollY > 100) {
             header.classList.add('down')     
+            scrollUp.classList.add('visible')
         } else {
             header.classList.remove('down')
+            scrollUp.classList.remove('visible')
         }
     });
 });
@@ -28,37 +30,19 @@ document.querySelectorAll('.header_nav_buttons > li').forEach(li => {
         if (tab) {
             if (tab.classList.contains('active')) {
                 tab.classList.remove('active');
-                tabContent.style.opacity = 0;
-                tabContent.style.maxHeight = 0;
-                setTimeout(() => {
-                    tab.style.background = 'transparent';
-                    tab.style.position = 'absolute';
-                }, 255);
             } else {
-                document.querySelectorAll('.header_nav_tabs').forEach(t => {
-                    const content = t.querySelector('ul');                   
-                    if (content) {
-                        content.style.opacity = 0; 
-                        content.style.maxHeight = 0;    
-                        t.style.background = 'transparent';
-                    }
+                document.querySelectorAll('.header_nav_tabs').forEach(t => {                    
                     t.classList.remove('active');
                 });
-                tabContent.style.opacity = 0;
-                if (window.innerWidth >= 768) {
-                    tab.style.position = 'absolute';
-                } else {
-                    tab.style.position = 'static';
-                }
-                setTimeout(() => {
-                    tabContent.style.opacity = 1;
-                    tabContent.style.maxHeight = '8rem';
-                    tab.style.background = '#ffffff';
-                }, 10);
-                
                 tab.classList.add('active');
             }
         }
     });
 });
 
+scrollUp.addEventListener('click', () => {
+    document.documentElement.scrollTo({
+        top: 0,
+        behavior: "smooth",
+    })
+})

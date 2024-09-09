@@ -1,7 +1,8 @@
 .header {
+    position: relative;
     width: 100%;
     background: $clr-light;
-    z-index: 9999;
+    z-index: 99999;
     transition: all 0.25s ease;
     box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 24px;
     &.down {
@@ -42,18 +43,19 @@
     }
     &_text {
         width: 100%;
-        height: 100%;
         position: absolute;
-        display: none;
+        max-height: 0rem;
+        overflow: hidden;
+        transition: 0.5s ease;
+        top: 10.5rem;
+        left: 0;
         ul {
             display: flex;
             gap: 1rem;
         }
         &.open {
-            top: 10.5rem;
-            left: 0;
-            display: block;
-            position: absolute;
+            max-height: 40rem;
+            transition: 0.5s ease;
         }
         &_top {
             width: 100%;
@@ -104,49 +106,24 @@
                 @include centerAll;
                 background: $clr-light;
                 width: 100%;
-                padding: 0 2rem;
-                padding-left: 6rem;
-                position: absolute;
-                display: none;
-                &.open {
-                    padding: 2rem 2.5rem;
-                    display: block;
-                }
+                padding: 2.25rem 2rem;
                 ul {
-                    align-items: center;
                     font-weight: 600;
-                    &:first-child {
-                        position: relative;
-                        display: flex;
-                        align-items: start;
-                        flex-direction: column;
-                        gap: 3.5rem;
-                        li {
-                            a {
-                                height: 100%;
-                                transition: 0.15s ease;
-                                span {
-                                    font-size: 2rem;
-                                    margin-left: 6px;
-                                    color: $clr-red;
-                                }
-                                &:hover {
-                                    color: $clr-red;
-                                }
-                            }
-                        }
-                    }
                     &:nth-child(2) {
+                        align-items: center;
                         display: none;
+                        gap: 2rem;
                         li {
                             &:first-child {
                                 a {
                                     font-size: 1.5rem;
                                     font-weight: 200;
-                                    border: 1px solid rgba($color: #000000, $alpha: 0.2);
-                                    padding: 1.5rem 1.7rem;
+                                    border: 1px solid #e0e0e0;
+                                    padding: 1.95rem;
                                     border-radius: 100%;
                                     transition: 0.5s ease;
+                                    display: grid;
+                                    place-content: center;
                                     &:hover {
                                         border: 1px solid $clr-red;
                                         background: $clr-red;
@@ -154,19 +131,54 @@
                                     }
                                 }
                             }
+                            &:last-child {
+                                a {
+                                    padding: 1.75rem 3.5rem;
+                                }
+                            }
+                        }
+                    }
+                }
+                &_buttons {
+                    width: 100%;
+                    position: relative;
+                    display: flex;
+                    align-items: start;
+                    flex-direction: column;
+                    gap: 1.5rem;
+                    li {
+                        a {
+                            height: 100%;
+                            transition: 0.15s ease;
+                            span {
+                                font-size: 2rem;
+                                margin-left: 6px;
+                                color: $clr-red;
+                            }
+                            &:hover {
+                                color: $clr-red;
+                            }
                         }
                     }
                 }
                 &_tabs {
-                    margin-top: 2rem;
-                    margin-left: 1.35rem;
-                    background: transparent;
+                    padding-left: 1.35rem;
+                    max-width: 100%;
+                    background: $clr-light;
                     display: flex;
-                    position: absolute;
+                    position: block;
+                    max-height: 0;
+                    overflow: hidden;
+                    transition: max-height 0.5s ease;
+                    &.active {
+                        max-height: 10rem;
+                    }
                     ul {
-                        opacity: 0;
+                        display: flex;
+                        flex-direction: column;
                         max-width: 100%;
-                        transition: 0.25s ease;
+                        margin-top: 2rem;
+                        gap: 1.5rem;
                         li {
                             a {
                                 i {
@@ -218,8 +230,11 @@
             margin: 1rem 6.75rem 1rem 12rem;
         }
         &_text {
+            max-height: min-content;
             display: unset;
             position: static;
+            overflow: visible;
+            top: 0;
             &_top {
                 display: block;
             }
@@ -231,23 +246,43 @@
                         position: relative;
                         display: flex;
                         ul {
-                            &:first-child {
-                                flex-direction: row;
-                            }
                              &:nth-child(2) {
                                 display: flex;
                             }
                         }
+                        &_buttons {
+                            flex-direction: row;
+                            gap: 3.5rem;
+                            margin-left: 5rem;
+                            width: 50%;
+                        }
                         &_tabs {
-                            position: absolute;
+                            padding-left: 0;
                             width: max-content;
-                            padding: 1.75rem 3rem;
-                            top: 3.8rem;
-                            margin-left: 0;
+                            background: $clr-light;
+                            top: 6.5rem;
+                            position: absolute;
+                            overflow: hidden;
+                            max-height: 0rem;
+                            box-shadow: none;
+                            transition: 0.5s ease;
                             &.active {
-                                ul {
-                                    display: flex;
-                                    flex-direction: column;
+                                max-height: 12rem;
+                                box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+                            }
+                            ul {
+                                display: flex;
+                                flex-direction: column;
+                                margin-top: 0;
+                                padding: 2.5rem 3rem;
+                                li {
+                                    display: block;
+                                    a {
+                                        i {
+                                            color: $clr-red;
+                                            margin-right: 0.75rem;
+                                        }
+                                    }
                                 }
                             }
                         }

@@ -147,3 +147,36 @@
     color: $clr-light;
     background: $clr-red;
 }
+
+.scroll_up {
+    position: fixed;
+    bottom: 0;
+    right: 3rem;
+    z-index: 99999;
+    a {
+        display: grid;
+        place-content: center;
+        font-size: 2rem;
+        color: $clr-light;
+        background: $clr-red;
+        padding: 2.25rem;
+        clip-path: polygon(53% 0,100% 20px,100% 100%,0 100%,0% 20px);
+        transition: 0.75s ease;
+        opacity: 0;
+        transform: translateY(-5rem);
+        &.visible {
+            opacity: 1;
+            transform: translateY(0rem)
+        }
+        i {
+            margin-top: 1rem;
+        }
+    }
+    @include mediaQuery($desktop) {
+        a {
+            &:hover {
+                background: $clr-dark;
+            }
+        }
+    }
+}
