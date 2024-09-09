@@ -1961,7 +1961,7 @@ body {
   font-size: 13px;
 }
 .blog_wrapper .blog_card #blog1 .inner_bg {
-  background-image: url("../img/Blog Side Bar Right/blog food 1.jpg");
+  background-image: url("/img/Blog Side Bar Right/blog food 1.jpg");
 }
 .blog_wrapper .blog_card #blog2 .inner_bg {
   background-image: url("../img/Blog Side Bar Right/blog food 2.jpg");
