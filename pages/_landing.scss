@@ -284,6 +284,9 @@
                         color: $clr-red;
                         font-weight: 400;
                     }
+                    &:hover {
+                        transform: rotate(0deg);
+                    }
                 }
             }
         }

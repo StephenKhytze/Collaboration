@@ -165,6 +165,14 @@ body {
   color: #ffffff;
   transition: 0.5s ease;
 }
+.tns-nav-buttons:hover {
+  border-top: 1px solid #eb0029;
+  border-bottom: 1px solid #eb0029;
+  transform: rotate(360deg);
+}
+.tns-nav-buttons:hover a {
+  background: #eb0029;
+}
 
 .font-cursive {
   font-family: "Lobster Two", sans-serif;
@@ -493,6 +501,9 @@ body {
     background: #ffffff;
     color: #eb0029;
     font-weight: 400;
+  }
+  .home_banner #home_banner_nav .tns-nav-buttons:hover {
+    transform: rotate(0deg);
   }
 }
 
