@@ -2082,7 +2082,7 @@ body {
   border: 1px solid #e0e0e0;
 }
 .blog_wrapper .blog_main_menu .blog_menu_tabs.active {
-  max-height: 12rem;
+  max-height: 8rem;
 }
 .blog_wrapper .blog_main_menu .blog_menu_tabs ul {
   display: flex;
