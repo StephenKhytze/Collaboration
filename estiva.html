@@ -118,7 +118,7 @@
                         <h1 class="font-heading">ABOUT <span class="font-cursive"> US </span></h1>
                     </div>
                     <div class="about_banner_location">
-                        <h2>You are here: <span class="choices"><a href="">Home</a> / Pages / About Us </span></h2>
+                        <h2>You are here:<a href=""> Home </a> <span>/</span>  Pages  <span>/</span> About Us   </h2>
                     </div>
                 </div>
             </div>
@@ -230,6 +230,7 @@
                             </div>
                         </div>
                         <div class="quality_content_img">
+                            <img src="/img/estiva_img/discount_bg_1.svg" alt=""class="discount">
                             <img src="/img/estiva_img/about_2_2.png" alt="" class="bg_about">
                             <img src="/img/estiva_img/about_2_1.png" alt="" class="image_about">
                             <img src="" alt="">
@@ -773,6 +774,21 @@
                         </div>
                     </div>
                 </div>
+                <div class="slider_nav_container">
+                    <span></span>
+                    <div id="testimonial_slider_nav" class="tns-nav">
+                        <div class="tns-nav-buttons" data-nav="0" aria-controls="tns1"><a href="javascript:void(0)">1</a></div>
+                        <div class="tns-nav-buttons" data-nav="1" aria-controls="tns1"><a href="javascript:void(0)">2</a></div>
+                        <div class="tns-nav-buttons" data-nav="2" aria-controls="tns1"><a href="javascript:void(0)">3</a></div>
+                        <div class="tns-nav-buttons" data-nav="3" aria-controls="tns1"><a href="javascript:void(0)">4</a></div>
+                        <div class="tns-nav-buttons" data-nav="4" aria-controls="tns1"><a href="javascript:void(0)">5</a></div>
+                        <div class="tns-nav-buttons" data-nav="5" aria-controls="tns1"><a href="javascript:void(0)">6</a></div>
+                        <div class="tns-nav-buttons" data-nav="6" aria-controls="tns1"><a href="javascript:void(0)">7</a></div>
+                        <div class="tns-nav-buttons" data-nav="7" aria-controls="tns1"><a href="javascript:void(0)">8</a></div>
+                        <div class="tns-nav-buttons" data-nav="8" aria-controls="tns1"><a href="javascript:void(0)">9</a></div>
+                    </div>
+                    <span></span>
+                </div>
                 </div>
             </div>
         </div>
@@ -882,6 +898,28 @@
             }
           }
         })
+
+        var testimonialSlider = tns ({
+            container: '.testimonial_sliders',
+            items: 1,
+            controls: false,
+            speed: 1250,
+            center: true,
+            autoplay: true,
+            mouseDrag: true,
+            autoplayButtonOutput: false,
+            navContainer: '#testimonial_slider_nav',
+            navAsThumbnails: false,
+            loop: true,
+            responsive: {
+            760: {
+                items: 3,
+                mouseDrag: true,
+                center: true,
+            }
+          }
+        })
     </script>
+
 </body>
 </html>

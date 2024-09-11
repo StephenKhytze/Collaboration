@@ -2389,19 +2389,31 @@ body {
 }
 .about_banner_content {
   color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  padding-left: 3rem;
 }
 .about_banner_content a {
   color: #eb0029;
 }
 .about_banner_title {
   font-size: 3rem;
+  margin-top: 10rem;
 }
 .about_banner_title span {
   color: #ff9d2d;
 }
 .about_banner_location {
   font-size: 1rem;
-  font-weight: lighter;
+}
+.about_banner_location h2 {
+  font-weight: 400;
+}
+.about_banner_location a {
+  margin-left: 1rem;
+}
+.about_banner_location span {
+  margin: 0 1rem;
 }
 
 .quality_wrapper {
@@ -2456,18 +2468,31 @@ body {
 }
 .quality_text_discover .experience_information {
   display: flex;
-  gap: 2rem;
+  text-transform: uppercase;
+  align-items: center;
+  margin-left: 2rem;
+  gap: 5px;
 }
 .quality_text_discover .experience_information h1 {
   color: #eb0029;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 1;
+  font-family: Rubik;
 }
 .quality_text_discover .experience_information_text {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
 }
+.quality_text_discover .experience_information_text h2 {
+  font-size: 1.5rem;
+  font-weight: 300;
+}
 .quality_text_discover .experience_information_text p {
-  font-size: 1.75rem;
+  line-height: 1rem;
+  font-size: 1.5rem;
+  font-weight: 500;
 }
 .quality_content_img {
   display: flex;
@@ -2478,7 +2503,7 @@ body {
 .quality_content_img .image_about {
   margin-top: -10rem;
   z-index: 2;
-  width: 90%;
+  width: 80%;
   position: absolute;
   rotate: 180deg;
   justify-content: end;
@@ -2487,11 +2512,33 @@ body {
   margin-top: -10rem;
   z-index: -1;
   left: 0;
-  width: 100%;
+  width: 90%;
   margin-right: -6rem;
   transform: scaleX(-1);
 }
+.quality_content_img .discount {
+  z-index: 3;
+  rotate: 180deg;
+  transform: scaleX(-1);
+  position: absolute;
+  top: -80px;
+  left: 20px;
+}
 @media screen and (min-width: 1080px) {
+  .quality_wrapper {
+    display: flex;
+    flex-direction: column;
+    max-width: 130rem;
+    margin: 0 auto;
+    background: url(/img/estiva_img/about_line.png);
+    background-repeat: no-repeat;
+    background-position: top;
+    z-index: 0;
+    top: -150px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
   .quality .quality_text_content {
     padding-right: 8rem;
   }
@@ -2520,6 +2567,14 @@ body {
     left: 0;
     margin-right: -6rem;
     transform: scaleX(-1);
+  }
+  .quality .quality_content_img .discount {
+    z-index: 3;
+    rotate: 180deg;
+    transform: scaleX(-1);
+    position: absolute;
+    left: -10rem;
+    top: 3rem;
   }
 }
 
@@ -2601,6 +2656,8 @@ body {
 }
 
 .testimonial {
+  position: relative;
+  overflow: hidden;
   background: #faf7f2;
 }
 .testimonial_wrapper {
@@ -2610,13 +2667,18 @@ body {
   background-position: center;
   display: flex;
   flex-direction: column;
-  max-width: 130rem;
+  max-width: 120rem;
   margin: 0 auto;
+}
+.testimonial_wrapper_nav .tns-nav-buttons {
+  display: none;
+}
+.testimonial_wrapper_nav .tns-nav-buttons:first-child, .testimonial_wrapper_nav .tns-nav-buttons:nth-child(2), .testimonial_wrapper_nav .tns-nav-buttons:nth-child(3) {
+  display: grid;
 }
 .testimonial_text {
   padding-left: 1rem;
-  padding-right: 5rem;
-  padding-bottom: 10rem;
+  padding-bottom: 1rem;
 }
 .testimonial_text .testimonial_title {
   display: flex;
@@ -2633,13 +2695,14 @@ body {
 .testimonial_text_content p {
   color: rgba(0, 0, 0, 0.7);
   margin: 2rem 0;
+  font-size: 1.5rem;
 }
 .testimonial_sliders {
   display: flex;
   flex-direction: row;
   width: -moz-max-content;
   width: max-content;
-  gap: 3rem;
+  gap: 1rem;
 }
 .testimonial_slider {
   width: 100%;
@@ -2652,6 +2715,7 @@ body {
   display: flex;
   flex-direction: column;
   padding: 3.5rem;
+  margin-bottom: 10rem;
 }
 .testimonial_slider_rating ul {
   display: flex;
@@ -2676,6 +2740,23 @@ body {
 .testimonial_slider_info h2 {
   font-weight: 500;
   font-size: 1.5rem;
+}
+@media screen and (min-width: 1080px) {
+  .testimonial_slider {
+    position: relative;
+    display: inline-block;
+    margin: 0;
+    padding: 0 1.35rem;
+    max-width: 40rem;
+    z-index: 1;
+    transition: all 0.45s ease;
+  }
+  .testimonial .tns-nav-buttons {
+    display: none;
+  }
+  .testimonial .tns-nav-buttons:first-child, .testimonial .tns-nav-buttons:nth-child(2), .testimonial .tns-nav-buttons:nth-child(3) {
+    display: grid;
+  }
 }
 
 .lb__diner_container {
