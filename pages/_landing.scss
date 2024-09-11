@@ -2490,6 +2490,7 @@
         display: flex;
         flex-direction: column;
         padding-left: 3rem;
+        line-height: 4rem;
 
         a{
             color: $clr-red
@@ -2503,7 +2504,7 @@
         }
     }
     &_location{
-        font-size: 1rem;
+        font-size: 1.3rem;
         h2{
             font-weight: 400;
         }
@@ -2512,6 +2513,11 @@
         }
         span{
             margin: 0 1rem ;
+        }
+    }
+    @include mediaQuery($desktop){
+        &_content{
+            margin-left: 18%;
         }
     }
     
@@ -2535,6 +2541,7 @@
     }
     &_content{
         margin-top: 12rem;
+
     }
     &_text {
         padding: 0 3rem;
@@ -2564,7 +2571,7 @@
             flex-direction: row;
             .discover_button {
                 margin: 2.5rem 0;
-                padding: 1rem 2rem;
+                padding: 2rem 4rem;
                 font-weight: 600;
             }
             .experience_information {  
@@ -2603,6 +2610,37 @@
             justify-content: center;
             align-items: center;
             position: relative;
+            .content_img_overlay {
+                position: absolute;
+                top:  -4rem;
+                left: 2rem;
+                z-index: 99;
+                &_text {
+                    position: absolute;
+                    display: flex;
+                    align-items: center;
+                    top: 3rem;
+                    left: 1rem;
+                    color: $clr-light;
+                    h1 {
+                        font-size: 3.5rem;
+                    }
+                    .subtext {
+                        h1, p {
+                            line-height: 1;
+                        }
+                        h1 {
+                            font-size: 1.8rem;
+                        }
+                        p {
+                            font-size: 1.3rem;
+                        }
+                    }
+                }
+                img {
+                    transform: rotate(90deg);
+                }
+            }
             .image_about {
                 margin-top: -10rem;
                 z-index: 2;
@@ -2619,15 +2657,7 @@
                 margin-right: -6rem;
                 transform: scaleX(-1);
             }
-            .discount{
-                z-index: 3;
-                rotate: 180deg;
-                transform: scaleX(-1);
-                position: absolute;
-                top: -80px;
-                left: 20px;
 
-            }
     }
     @include mediaQuery($desktop){
         &_wrapper {
@@ -2637,7 +2667,7 @@
             margin: 0 auto;
             background: url(/img/estiva_img/about_line.png);
             background-repeat: no-repeat;
-            background-position: top;
+
             z-index: 0;
             top: -150px;
             left: 0;
@@ -2654,6 +2684,10 @@
                 flex-direction: row;
             }
             &_content_img{
+                .content_img_overlay{
+                    top: 1rem;
+                    left: -9rem;
+                }
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -2673,16 +2707,8 @@
                     left: 0;
                     margin-right: -6rem;
                     transform: scaleX(-1);
-    
                 }
-                .discount{
-                    z-index: 3;
-                    rotate: 180deg;
-                    transform: scaleX(-1);
-                    position: absolute;
-                    left: -10rem;
-                    top: 3rem;
-                }
+
             }
         }
     }

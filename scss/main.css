@@ -2498,6 +2498,7 @@ body {
   display: flex;
   flex-direction: column;
   padding-left: 3rem;
+  line-height: 4rem;
 }
 .about_banner_content a {
   color: #eb0029;
@@ -2510,7 +2511,7 @@ body {
   color: #ff9d2d;
 }
 .about_banner_location {
-  font-size: 1rem;
+  font-size: 1.3rem;
 }
 .about_banner_location h2 {
   font-weight: 400;
@@ -2520,6 +2521,11 @@ body {
 }
 .about_banner_location span {
   margin: 0 1rem;
+}
+@media screen and (min-width: 1080px) {
+  .about_banner_content {
+    margin-left: 18%;
+  }
 }
 
 .quality_wrapper {
@@ -2569,7 +2575,7 @@ body {
 }
 .quality_text_discover .discover_button {
   margin: 2.5rem 0;
-  padding: 1rem 2rem;
+  padding: 2rem 4rem;
   font-weight: 600;
 }
 .quality_text_discover .experience_information {
@@ -2606,6 +2612,35 @@ body {
   align-items: center;
   position: relative;
 }
+.quality_content_img .content_img_overlay {
+  position: absolute;
+  top: -4rem;
+  left: 2rem;
+  z-index: 99;
+}
+.quality_content_img .content_img_overlay_text {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  top: 3rem;
+  left: 1rem;
+  color: #ffffff;
+}
+.quality_content_img .content_img_overlay_text h1 {
+  font-size: 3.5rem;
+}
+.quality_content_img .content_img_overlay_text .subtext h1, .quality_content_img .content_img_overlay_text .subtext p {
+  line-height: 1;
+}
+.quality_content_img .content_img_overlay_text .subtext h1 {
+  font-size: 1.8rem;
+}
+.quality_content_img .content_img_overlay_text .subtext p {
+  font-size: 1.3rem;
+}
+.quality_content_img .content_img_overlay img {
+  transform: rotate(90deg);
+}
 .quality_content_img .image_about {
   margin-top: -10rem;
   z-index: 2;
@@ -2622,14 +2657,6 @@ body {
   margin-right: -6rem;
   transform: scaleX(-1);
 }
-.quality_content_img .discount {
-  z-index: 3;
-  rotate: 180deg;
-  transform: scaleX(-1);
-  position: absolute;
-  top: -80px;
-  left: 20px;
-}
 @media screen and (min-width: 1080px) {
   .quality_wrapper {
     display: flex;
@@ -2638,7 +2665,6 @@ body {
     margin: 0 auto;
     background: url(/img/estiva_img/about_line.png);
     background-repeat: no-repeat;
-    background-position: top;
     z-index: 0;
     top: -150px;
     left: 0;
@@ -2658,6 +2684,10 @@ body {
     align-items: center;
     position: relative;
   }
+  .quality .quality_content_img .content_img_overlay {
+    top: 1rem;
+    left: -9rem;
+  }
   .quality .quality_content_img img {
     width: unset;
   }
@@ -2673,14 +2703,6 @@ body {
     left: 0;
     margin-right: -6rem;
     transform: scaleX(-1);
-  }
-  .quality .quality_content_img .discount {
-    z-index: 3;
-    rotate: 180deg;
-    transform: scaleX(-1);
-    position: absolute;
-    left: -10rem;
-    top: 3rem;
   }
 }
 
