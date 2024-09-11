@@ -127,6 +127,14 @@
             color: $clr-light;
             transition: 0.5s ease;
         }
+        &:hover {
+            border-top: 1px solid $clr-red;
+            border-bottom: 1px solid $clr-red;
+            transform: rotate(360deg);
+            a {
+                background: $clr-red;
+            }
+        }
     }
 }
 
