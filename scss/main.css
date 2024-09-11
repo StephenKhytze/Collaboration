@@ -1488,6 +1488,7 @@ body {
 
 .chefs {
   position: relative;
+  z-index: 999;
   overflow: hidden;
 }
 .chefs_wrapper {
@@ -2787,16 +2788,44 @@ body {
   position: relative;
   overflow: hidden;
   background: #faf7f2;
+  margin-top: -24rem;
+}
+.testimonial_background {
+  background-image: url(/img/estiva_img/feature_bg_2.png);
+}
+.testimonial_overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.testimonial_overlay .overlay_images {
+  display: flex;
+  justify-content: space-between;
+  animation: move_background 16s linear;
+  animation-iteration-count: infinite;
+}
+.testimonial_overlay .overlay_images:last-child {
+  margin-top: 12rem;
+  align-items: flex-end;
+  padding: 0 13rem;
+  animation-delay: 8s;
+}
+.testimonial_overlay .overlay_images img {
+  height: -moz-max-content;
+  height: max-content;
+  width: -moz-max-content;
+  width: max-content;
 }
 .testimonial_wrapper {
-  padding-top: 10rem;
-  background-image: url(/img/estiva_img/feature_bg_2.png);
+  position: relative;
+  padding-top: 30rem;
   background-size: cover;
   background-position: center;
   display: flex;
   flex-direction: column;
   max-width: 120rem;
   margin: 0 auto;
+  z-index: 999;
 }
 .testimonial_wrapper_nav .tns-nav-buttons {
   display: none;
@@ -2869,7 +2898,32 @@ body {
   font-weight: 500;
   font-size: 1.5rem;
 }
+.testimonial .tns-controls {
+  display: flex;
+  position: absolute;
+  top: 35rem;
+  right: 0;
+  gap: 1rem;
+}
+.testimonial .tns-controls button {
+  border: none;
+  border-radius: 100%;
+  height: 6rem;
+  width: 6rem;
+  font-size: 2rem;
+  color: #eb0029;
+  background: #ffffff;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  transition: 0.5s ease;
+}
+.testimonial .tns-controls button:hover {
+  color: #ffffff;
+  background: #eb0029;
+}
 @media screen and (min-width: 1080px) {
+  .testimonial_text {
+    max-width: 60rem;
+  }
   .testimonial_slider {
     position: relative;
     display: inline-block;

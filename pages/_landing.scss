@@ -1357,6 +1357,7 @@
 
 .chefs {
     position: relative;
+    z-index: 999;
     overflow: hidden;
     &_wrapper {
         padding: 12rem 0;
@@ -2809,15 +2810,41 @@
     position: relative;
     overflow: hidden;
     background:#faf7f2;
-    &_wrapper {
-        padding-top: 10rem;
+    margin-top: -24rem;
+    &_background {
         background-image: url(/img/estiva_img/feature_bg_2.png);
+    }
+    &_overlay {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        .overlay_images {
+            display: flex;
+            justify-content: space-between;
+            animation: move_background 16s linear;
+            animation-iteration-count: infinite;
+            &:last-child {
+                margin-top: 12rem;
+                align-items: flex-end;
+                padding: 0 13rem;
+                animation-delay: 8s;
+            }
+            img {
+                height: max-content;
+                width: max-content;
+            }
+        }
+    }
+    &_wrapper {
+        position: relative;
+        padding-top: 30rem;
         background-size: cover;
         background-position: center;
         display: flex;
         flex-direction: column;
         max-width: 120rem;
         margin: 0 auto;
+        z-index: 999;
         &_nav{
             .tns-nav-buttons {
                 display: none;
@@ -2900,7 +2927,32 @@
             }
         }
     }
+    .tns-controls {
+        display: flex;
+        position: absolute;
+        top: 35rem;
+        right: 0;
+        gap: 1rem;
+        button {
+            border: none;
+            border-radius: 100%;
+            height: 6rem;
+            width: 6rem;
+            font-size: 2rem;
+            color: $clr-red;
+            background: $clr-light;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            transition: 0.5s ease;
+            &:hover {
+                color: $clr-light;
+                background: $clr-red;
+            }
+        }
+    }
     @include mediaQuery($desktop){
+        &_text {
+            max-width: 60rem;
+        }
         &_slider {
             position: relative;
             display: inline-block;
