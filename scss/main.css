@@ -2794,6 +2794,7 @@ body {
   background-image: url(/img/estiva_img/feature_bg_2.png);
 }
 .testimonial_overlay {
+  display: none;
   position: absolute;
   width: 100%;
   height: 100%;
@@ -2921,6 +2922,9 @@ body {
   background: #eb0029;
 }
 @media screen and (min-width: 1080px) {
+  .testimonial_overlay {
+    display: block;
+  }
   .testimonial_text {
     max-width: 60rem;
   }
