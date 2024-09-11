@@ -1309,10 +1309,11 @@ body {
   border: 1px solid #4d5765;
   border-radius: 10rem;
   padding: 1rem 2.75rem;
+  transition: 0.5s ease;
 }
 .popular_menu_tabs ul li a.active {
   background: #eb0029;
-  border: 2px solid #eb0029;
+  border: 1px solid #eb0029;
   color: #ffffff;
 }
 .popular_menu_slider {

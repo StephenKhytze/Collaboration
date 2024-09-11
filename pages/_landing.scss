@@ -1162,9 +1162,10 @@
                     border: 1px solid #4d5765;
                     border-radius: 10rem;
                     padding: 1rem 2.75rem;
+                    transition: 0.5s ease;
                     &.active {
                         background: $clr-red;
-                        border: 2px solid $clr-red;
+                        border: 1px solid $clr-red;
                         color: $clr-light;
                     }
                 }
