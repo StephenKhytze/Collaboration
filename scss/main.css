@@ -2530,6 +2530,15 @@ body {
   }
 }
 
+.quality {
+  position: relative;
+}
+.quality .dog {
+  display: none;
+}
+.quality .pot {
+  display: none;
+}
 .quality_wrapper {
   display: flex;
   flex-direction: column;
@@ -2537,8 +2546,8 @@ body {
   margin: 0 auto;
   background: url(/img/estiva_img/about_line.png);
   background-repeat: no-repeat;
-  background-position: top;
-  background-position: center;
+  background-position-x: center;
+  background-position-y: 60rem;
   z-index: 0;
   top: -150px;
   left: 0;
@@ -2643,7 +2652,7 @@ body {
 .quality_content_img .content_img_overlay img {
   transform: rotate(90deg);
 }
-.quality_content_img .image_about {
+.quality .image_about {
   margin-top: -10rem;
   z-index: 2;
   width: 80%;
@@ -2651,7 +2660,7 @@ body {
   rotate: 180deg;
   justify-content: end;
 }
-.quality_content_img .bg_about {
+.quality .bg_about {
   margin-top: -10rem;
   z-index: -1;
   left: 0;
@@ -2660,13 +2669,42 @@ body {
   transform: scaleX(-1);
 }
 @media screen and (min-width: 1080px) {
+  .quality {
+    background: url(/img/estiva_img/about_line.png);
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: -15rem;
+  }
+  .quality .pot {
+    display: unset;
+    position: absolute;
+    right: -12rem;
+    bottom: 10rem;
+  }
+  .quality .dog {
+    display: unset;
+    position: absolute;
+    right: 130rem;
+    top: -3rem;
+  }
+  .quality .pot, .quality .dog {
+    animation: move_background 10s linear;
+    animation-iteration-count: infinite;
+  }
+  .quality .experience_information h1 {
+    font-size: 5rem;
+    padding-right: 2rem;
+  }
+  .quality .experience_information_text p {
+    font-size: 2rem;
+  }
   .quality_wrapper {
     display: flex;
     flex-direction: column;
     max-width: 130rem;
     margin: 0 auto;
-    background: url(/img/estiva_img/about_line.png);
-    background-repeat: no-repeat;
+    padding-top: 8rem;
+    background-image: none;
     z-index: 0;
     top: -150px;
     left: 0;
@@ -2790,6 +2828,7 @@ body {
   overflow: hidden;
   background: #faf7f2;
   margin-top: -24rem;
+  margin-bottom: 20rem;
 }
 .testimonial_background {
   background-image: url(/img/estiva_img/feature_bg_2.png);

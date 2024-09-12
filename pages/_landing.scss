@@ -2493,7 +2493,6 @@
         flex-direction: column;
         padding-left: 3rem;
         line-height: 4rem;
-
         a{
             color: $clr-red
         }
@@ -2526,6 +2525,13 @@
 }
 
 .quality{
+    position: relative;
+    .dog{
+        display: none;
+    }
+    .pot{
+        display: none;
+    }
     &_wrapper {
         display: flex;
         flex-direction: column;
@@ -2533,8 +2539,8 @@
         margin: 0 auto;
         background: url(/img/estiva_img/about_line.png);
         background-repeat: no-repeat;
-        background-position: top;
-        background-position: center;
+        background-position-x: center;
+        background-position-y: 60rem;
         z-index: 0;
         top: -150px;
         left: 0;
@@ -2643,6 +2649,7 @@
                     transform: rotate(90deg);
                 }
             }
+            }
             .image_about {
                 margin-top: -10rem;
                 z-index: 2;
@@ -2659,16 +2666,48 @@
                 margin-right: -6rem;
                 transform: scaleX(-1);
             }
-
-    }
+    
     @include mediaQuery($desktop){
+        background: url(/img/estiva_img/about_line.png);
+            background-repeat: no-repeat;
+            background-position-x: center;
+            background-position-y: -15rem;
+            .pot{
+                display: unset;
+                position: absolute;
+                right: -12rem;
+                bottom: 10rem;
+
+            }
+            .dog{
+                display: unset;
+                position: absolute;
+                right: 130rem;
+                top:-3rem;
+            }
+            .pot,.dog{
+                animation: move_background 10s linear;
+                animation-iteration-count: infinite;
+            }
+        .experience_information{
+            h1{
+                font-size: 5rem;
+                padding-right: 2rem;
+            }
+            &_text{
+                p{
+                    font-size: 2rem;
+                }
+            }
+        }
         &_wrapper {
             display: flex;
             flex-direction: column;
             max-width: 130rem;
             margin: 0 auto;
-            background: url(/img/estiva_img/about_line.png);
-            background-repeat: no-repeat;
+            padding-top: 8rem;
+            background-image: none;
+            
 
             z-index: 0;
             top: -150px;
@@ -2812,6 +2851,7 @@
     overflow: hidden;
     background:#faf7f2;
     margin-top: -24rem;
+    margin-bottom: 20rem;
     &_background {
         background-image: url(/img/estiva_img/feature_bg_2.png);
     }
