@@ -2769,6 +2769,7 @@ body {
 }
 
 .lb__diner_container {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -2795,7 +2796,7 @@ body {
   cursor: pointer;
   font-weight: bold;
 }
-.lb__diner_container .categories .category-btn:active {
+.lb__diner_container .categories .category-btn.active {
   background-color: #f00;
   color: #fff;
 }
@@ -2808,16 +2809,13 @@ body {
     margin-bottom: 1rem;
   }
   .lb__diner_container .categories .category-btn {
+    align-self: center;
     padding: 10px 20px;
     border-radius: 20px;
     border: 1px solid #ccc;
     cursor: pointer;
     font-weight: bold;
     transition: 0.5s ease;
-  }
-  .lb__diner_container .categories .category-btn:active {
-    background-color: #f00;
-    color: #fff;
   }
   .lb__diner_container .categories .category-btn:hover {
     background-color: #f00;
@@ -2833,6 +2831,7 @@ body {
   position: relative;
   overflow: hidden;
   transition: 0.5s ease;
+  flex-shrink: 1;
 }
 .lb__diner_container .lb__diner__wrapper .lb__diner__holder .lb__diner__food {
   max-width: 30rem;
@@ -2940,6 +2939,8 @@ body {
     width: fit-content;
     margin: 50px auto;
     padding: 0 25px;
+    width: 132.5rem;
+    margin-bottom: 30rem;
   }
 }
 
@@ -2979,14 +2980,19 @@ body {
 
 .lb__floating_food {
   display: none;
+  position: absolute;
+  width: 100%;
+  animation: move_background 16s linear;
 }
 @media screen and (min-width: 1080px) {
   .lb__floating_food {
     visibility: visible;
     display: flex;
-    align-items: center;
+    align-items: start;
     justify-content: space-between;
     margin: 0px 70px;
+    left: -8rem;
+    bottom: -50rem;
   }
   .lb__floating_food img {
     width: 15%;

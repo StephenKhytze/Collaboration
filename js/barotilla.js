@@ -9,18 +9,27 @@ const foodItems = document.querySelectorAll(".lb__diner__holder");
 categoryBtns.forEach(btn => {
   btn.addEventListener("click", function() {
     const selectedCategory = btn.getAttribute("data-category");
-
+    removeActiveMenu();
+    btn.classList.add('active');
     foodItems.forEach(item => {
       const itemCategories = item.getAttribute("data-category").split(",");
 
       if (selectedCategory === "all" || itemCategories.includes(selectedCategory)) {
         item.style.scale = 1;
+        item.style.position = 'relative'
       } else {
         item.style.scale = 0;
+        item.style.position = 'absolute'
       }
     });
   });
 }); 
+
+function removeActiveMenu() {
+  categoryBtns.forEach((btn) => {
+      btn.classList.remove('active');
+  });
+}
 
 
 // Function to open the corresponding popup
