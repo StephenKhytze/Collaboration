@@ -5,6 +5,7 @@ const closeBtns = document.querySelectorAll(".close");
 const categoryBtns = document.querySelectorAll(".category-btn");
 const foodItems = document.querySelectorAll(".lb__diner__holder");
 
+// Function to filter food items based on category
 categoryBtns.forEach(btn => {
   btn.addEventListener("click", function() {
     const selectedCategory = btn.getAttribute("data-category");
@@ -13,26 +14,13 @@ categoryBtns.forEach(btn => {
       const itemCategories = item.getAttribute("data-category").split(",");
 
       if (selectedCategory === "all" || itemCategories.includes(selectedCategory)) {
-        // Remove the hidden class to show the item
-        item.classList.remove('hidden');
-        item.style.display = "inline-block"; // Ensure display is set properly
-        setTimeout(() => {
-          item.style.transform = "translateX(0)"; // Reset the position after displaying
-        }, 50); // Small delay to trigger animation
+        item.style.scale = 1;
       } else {
-        // Add the hidden class to move and fade out the item
-        item.classList.add('hidden');
-        item.style.transform = "translateX(-100px)";
-        // After transition ends, set display to none to hide it completely
-        setTimeout(() => {
-          if (item.classList.contains('hidden')) {
-            item.style.display = "none";
-          }
-        }, 600);  // Timeout matches the CSS transition duration (0.6s)
+        item.style.scale = 0;
       }
     });
   });
-});
+}); 
 
 
 // Function to open the corresponding popup
