@@ -2842,12 +2842,13 @@
            color: #fff;
 
          }
+       } 
+
+       .category-btn:hover{
+        background-color: #f00;
+        color: white;
+        transition: 0.4s ease;
        }
-
-
-
-       
-        
         @include mediaQuery($desktop){
         display: flex;
         flex-direction: row;
@@ -2862,11 +2863,6 @@
                cursor: pointer;
                font-weight: bold;
                transition: 0.5s ease;
-       }
-
-       .category-btn:hover{
-        background-color: #f00;
-        color: white;
        }
         }
      }
@@ -3008,42 +3004,84 @@
   }
   
   }
-  
-  .popup {
-    display: none;
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 99999;
+
+  .lb__popp__holder {
+
+    .popup {
+        display: none;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 99999;
+      }
+      
+      
+      .popup-content {
+        position: relative;
+        margin: 10% auto;
+        padding: 20px;
+        width: 83%;
+        max-width: 825px;
+        background-color: white;
+        border-radius: 15px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        top: 250px;
+      
+        img{
+          border-radius: 15px;
+          width: 35vh;
+        }
+      }
+      
+      .close {
+        position: absolute;
+        top: -5px;
+        right: 1px;
+        font-size: 35px;
+        cursor: pointer;
+      }
+      
+      @include mediaQuery($desktop) {
+            display: none;
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 99999;
+          .popup-content {
+            position: relative;
+            margin: 10% auto;
+            padding: 20px;
+            width: 80%;
+            max-width: 825px;
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+          
+            img{
+              border-radius: 15px;
+              width: 80vh;
+            }
+          }
+          
+          .close {
+            position: absolute;
+            top: -5px;
+            right: 1px;
+            font-size: 35px;
+            cursor: pointer;
+          }
+
+      }
+
+
   }
   
-  
-  .popup-content {
-    position: relative;
-    margin: 10% auto;
-    padding: 20px;
-    width: 80%;
-    max-width: 825px;
-    background-color: white;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  
-    img{
-      border-radius: 15px;
-      width: 80vh;
-    }
-  }
-  
-  .close {
-    position: absolute;
-    top: -5px;
-    right: 1px;
-    font-size: 35px;
-    cursor: pointer;
-  }
   
   
   .lb__floating_food {
