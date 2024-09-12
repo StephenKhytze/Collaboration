@@ -1489,7 +1489,7 @@ body {
 
 .chefs {
   position: relative;
-  z-index: 999;
+  z-index: 9999;
   overflow: hidden;
 }
 .chefs_wrapper {
@@ -2623,6 +2623,24 @@ body {
   align-items: center;
   position: relative;
 }
+.quality_content_img .order_text {
+  position: absolute;
+  z-index: 999;
+  bottom: 3rem;
+  left: 7rem;
+}
+.quality_content_img .order_text_content {
+  position: relative;
+}
+.quality_content_img .order_text h1 {
+  line-height: 1;
+  font-size: 2rem;
+}
+.quality_content_img .order_text img {
+  position: absolute;
+  top: 0.5rem;
+  left: -2rem;
+}
 .quality_content_img .content_img_overlay {
   position: absolute;
   top: -4rem;
@@ -2728,6 +2746,14 @@ body {
     top: 1rem;
     left: -9rem;
   }
+  .quality .quality_content_img .order_text {
+    bottom: 11.5rem;
+    left: -2rem;
+  }
+  .quality .quality_content_img .order_text:hover img {
+    animation: orderNow 1s linear;
+    animation-iteration-count: infinite;
+  }
   .quality .quality_content_img img {
     width: unset;
   }
@@ -2828,7 +2854,7 @@ body {
   overflow: hidden;
   background: #faf7f2;
   margin-top: -24rem;
-  margin-bottom: 20rem;
+  margin-bottom: 0;
 }
 .testimonial_background {
   background-image: url(/img/estiva_img/feature_bg_2.png);
@@ -2985,6 +3011,17 @@ body {
   }
 }
 
+@keyframes orderNow {
+  0% {
+    scale: 1;
+  }
+  50% {
+    scale: 1.25;
+  }
+  100% {
+    scale: 1;
+  }
+}
 .lb__diner_container {
   position: relative;
   display: flex;
@@ -3176,7 +3213,7 @@ body {
   position: relative;
   margin: 10% auto;
   padding: 20px;
-  width: 83%;
+  width: 80%;
   max-width: 825px;
   background-color: white;
   border-radius: 15px;

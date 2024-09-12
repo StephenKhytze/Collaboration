@@ -1358,7 +1358,7 @@
 
 .chefs {
     position: relative;
-    z-index: 999;
+    z-index: 9999;
     overflow: hidden;
     &_wrapper {
         padding: 12rem 0;
@@ -2618,6 +2618,24 @@
             justify-content: center;
             align-items: center;
             position: relative;
+            .order_text {
+                position: absolute;
+                z-index: 999;
+                bottom: 3rem;
+                left: 7rem;
+                &_content {
+                    position: relative;
+                }
+                h1 {
+                    line-height: 1;
+                    font-size: 2rem;
+                }
+                img {
+                    position: absolute;
+                    top: 0.5rem;
+                    left: -2rem;
+                }
+            }
             .content_img_overlay {
                 position: absolute;
                 top:  -4rem;
@@ -2728,6 +2746,16 @@
                 .content_img_overlay{
                     top: 1rem;
                     left: -9rem;
+                }
+                .order_text {
+                    bottom: 11.5rem;
+                    left: -2rem;
+                    &:hover {
+                        img {
+                            animation: orderNow 1s linear;
+                            animation-iteration-count: infinite;
+                        }
+                    }
                 }
                 display: flex;
                 justify-content: center;
@@ -2851,7 +2879,7 @@
     overflow: hidden;
     background:#faf7f2;
     margin-top: -24rem;
-    margin-bottom: 20rem;
+    margin-bottom: 0;
     &_background {
         background-image: url(/img/estiva_img/feature_bg_2.png);
     }
@@ -3016,7 +3044,17 @@
     }
 }
 
-
+@keyframes orderNow {
+    0% {
+        scale: 1;
+    }
+    50% {
+        scale: 1.25;
+    }
+    100% {
+        scale: 1;
+    }
+}
 
 
 
@@ -3243,7 +3281,7 @@
         position: relative;
         margin: 10% auto;
         padding: 20px;
-        width: 83%;
+        width: 80%;
         max-width: 825px;
         background-color: white;
         border-radius: 15px;
