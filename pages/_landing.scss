@@ -1162,9 +1162,10 @@
                     border: 1px solid #4d5765;
                     border-radius: 10rem;
                     padding: 1rem 2.75rem;
+                    transition: 0.5s ease;
                     &.active {
                         background: $clr-red;
-                        border: 2px solid $clr-red;
+                        border: 1px solid $clr-red;
                         color: $clr-light;
                     }
                 }
@@ -1357,6 +1358,7 @@
 
 .chefs {
     position: relative;
+    z-index: 999;
     overflow: hidden;
     &_wrapper {
         padding: 12rem 0;
@@ -2487,24 +2489,49 @@
         }
     &_content{
         color: $clr-light;
+        display: flex;
+        flex-direction: column;
+        padding-left: 3rem;
+        line-height: 4rem;
         a{
             color: $clr-red
         }
     }    
     &_title{
         font-size: 3rem;
+        margin-top: 10rem;
         span{
             color: $clr-yellow;
         }
     }
     &_location{
-        font-size: 1rem;
-        font-weight: lighter;
+        font-size: 1.3rem;
+        h2{
+            font-weight: 400;
+        }
+        a{
+            margin-left: 1rem;
+        }
+        span{
+            margin: 0 1rem ;
+        }
+    }
+    @include mediaQuery($desktop){
+        &_content{
+            margin-left: 18%;
+        }
     }
     
 }
 
 .quality{
+    position: relative;
+    .dog{
+        display: none;
+    }
+    .pot{
+        display: none;
+    }
     &_wrapper {
         display: flex;
         flex-direction: column;
@@ -2512,8 +2539,8 @@
         margin: 0 auto;
         background: url(/img/estiva_img/about_line.png);
         background-repeat: no-repeat;
-        background-position: top;
-        background-position: center;
+        background-position-x: center;
+        background-position-y: 60rem;
         z-index: 0;
         top: -150px;
         left: 0;
@@ -2522,6 +2549,7 @@
     }
     &_content{
         margin-top: 12rem;
+
     }
     &_text {
         padding: 0 3rem;
@@ -2551,21 +2579,34 @@
             flex-direction: row;
             .discover_button {
                 margin: 2.5rem 0;
-                padding: 1rem 2rem;
+                padding: 2rem 4rem;
                 font-weight: 600;
             }
             .experience_information {  
                 display: flex;
-                gap: 2rem;
+                text-transform: uppercase;
+                align-items: center;
+                margin-left: 2rem;
+                gap: 5px;
                 h1{
                     color:$clr-red;
+                    font-weight:bold;
+                    font-size: 32px;
+                    line-height: 1;
+                    font-family: Rubik;
                 }
                 &_text {
                     display: flex;
                     flex-direction: column;
                     gap: 0.5rem;
+                    h2{
+                        font-size: 1.5rem;
+                        font-weight: 300;
+                    }
                     p {
-                        font-size: 1.75rem;
+                        line-height: 1rem;
+                        font-size: 1.5rem;
+                        font-weight: 500;
                     }
                 }
             }
@@ -2577,10 +2618,42 @@
             justify-content: center;
             align-items: center;
             position: relative;
+            .content_img_overlay {
+                position: absolute;
+                top:  -4rem;
+                left: 2rem;
+                z-index: 99;
+                &_text {
+                    position: absolute;
+                    display: flex;
+                    align-items: center;
+                    top: 3rem;
+                    left: 1rem;
+                    color: $clr-light;
+                    h1 {
+                        font-size: 3.5rem;
+                    }
+                    .subtext {
+                        h1, p {
+                            line-height: 1;
+                        }
+                        h1 {
+                            font-size: 1.8rem;
+                        }
+                        p {
+                            font-size: 1.3rem;
+                        }
+                    }
+                }
+                img {
+                    transform: rotate(90deg);
+                }
+            }
+            }
             .image_about {
                 margin-top: -10rem;
                 z-index: 2;
-                width: 90%;
+                width: 80%;
                 position: absolute;
                 rotate: 180deg;
                 justify-content: end;
@@ -2589,16 +2662,60 @@
                 margin-top: -10rem;
                 z-index: -1;
                 left: 0;
-                width: 100%;
+                width: 90%;
                 margin-right: -6rem;
                 transform: scaleX(-1);
+            }
+    
+    @include mediaQuery($desktop){
+        background: url(/img/estiva_img/about_line.png);
+            background-repeat: no-repeat;
+            background-position-x: center;
+            background-position-y: -15rem;
+            .pot{
+                display: unset;
+                position: absolute;
+                right: -12rem;
+                bottom: 10rem;
 
             }
-    }
-    @include mediaQuery($desktop){
-        
-        .quality{
+            .dog{
+                display: unset;
+                position: absolute;
+                right: 130rem;
+                top:-3rem;
+            }
+            .pot,.dog{
+                animation: move_background 10s linear;
+                animation-iteration-count: infinite;
+            }
+        .experience_information{
+            h1{
+                font-size: 5rem;
+                padding-right: 2rem;
+            }
+            &_text{
+                p{
+                    font-size: 2rem;
+                }
+            }
+        }
+        &_wrapper {
+            display: flex;
+            flex-direction: column;
+            max-width: 130rem;
+            margin: 0 auto;
+            padding-top: 8rem;
+            background-image: none;
             
+
+            z-index: 0;
+            top: -150px;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .quality{ 
             &_text_content{
                 padding-right: 8rem;
             }
@@ -2608,6 +2725,10 @@
                 flex-direction: row;
             }
             &_content_img{
+                .content_img_overlay{
+                    top: 1rem;
+                    left: -9rem;
+                }
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -2627,14 +2748,12 @@
                     left: 0;
                     margin-right: -6rem;
                     transform: scaleX(-1);
-    
                 }
+
             }
         }
     }
 }
-
-
 
 .strength{
     background: $clr-dark;
@@ -2727,23 +2846,59 @@
     }
 }
 
-
 .testimonial{
+    position: relative;
+    overflow: hidden;
     background:#faf7f2;
-    &_wrapper {
-        padding-top: 10rem;
+    margin-top: -24rem;
+    margin-bottom: 20rem;
+    &_background {
         background-image: url(/img/estiva_img/feature_bg_2.png);
+    }
+    &_overlay {
+        display: none;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        .overlay_images {
+            display: flex;
+            justify-content: space-between;
+            animation: move_background 16s linear;
+            animation-iteration-count: infinite;
+            &:last-child {
+                margin-top: 12rem;
+                align-items: flex-end;
+                padding: 0 13rem;
+                animation-delay: 8s;
+            }
+            img {
+                height: max-content;
+                width: max-content;
+            }
+        }
+    }
+    &_wrapper {
+        position: relative;
+        padding-top: 30rem;
         background-size: cover;
         background-position: center;
         display: flex;
         flex-direction: column;
-        max-width: 130rem;
+        max-width: 120rem;
         margin: 0 auto;
+        z-index: 999;
+        &_nav{
+            .tns-nav-buttons {
+                display: none;
+                &:first-child, &:nth-child(2), &:nth-child(3) {
+                    display: grid;
+                }
+            }
+        }
     } 
     &_text {
         padding-left: 1rem;
-        padding-right: 5rem;
-        padding-bottom: 10rem;
+        padding-bottom: 1rem;
         .testimonial_title {
             display: flex;
             gap: 1rem;
@@ -2761,15 +2916,19 @@
             p {
                 color: rgba($color: #000000, $alpha: 0.7);
                 margin: 2rem 0;
+                font-size: 1.5rem;
             }
         }
     }
-
+    &_sliders{
+        display: flex;
+        flex-direction: row;
+        width: max-content;
+        gap: 1rem;
+    }
     &_slider {
         width: 100%;
-        &_content{
-            padding: 3rem;
-        }
+        
         &_tab {
             background-color: white;
             border-radius: 2rem;
@@ -2777,13 +2936,19 @@
             max-width: 38rem;
             display: flex;
             flex-direction: column;
-            align-items: center;
-            justify-content: center;
+            padding: 3.5rem;
+            margin-bottom: 10rem;
+            
         }
         &_rating{
             ul{
                 display: flex;
                 flex-direction: row;
+                margin: 3rem 0;
+                i{
+                    text-shadow: 1px 1px #212529, 1px 1px #212529, 0.1em 0.1em 0.1em rgba(0, 0, 0, 0.2);
+                }
+                
             }
         }
         &_bottom{
@@ -2791,6 +2956,61 @@
             flex-direction: row;
             img{
                 border-radius: 100%;
+                margin-right: 1rem;
+                width: max-content;
+                height: max-content;
+                
+            }
+        }
+        &_info{
+            h2{
+                font-weight: 500;
+                font-size: 1.5rem;
+            }
+        }
+    }
+    .tns-controls {
+        display: flex;
+        position: absolute;
+        top: 35rem;
+        right: 0;
+        gap: 1rem;
+        button {
+            border: none;
+            border-radius: 100%;
+            height: 6rem;
+            width: 6rem;
+            font-size: 2rem;
+            color: $clr-red;
+            background: $clr-light;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            transition: 0.5s ease;
+            &:hover {
+                color: $clr-light;
+                background: $clr-red;
+            }
+        }
+    }
+    @include mediaQuery($desktop){
+        &_overlay {
+            display: block;
+        }
+        &_text {
+            max-width: 60rem;
+        }
+        &_slider {
+            position: relative;
+            display: inline-block;
+            margin: 0;
+            padding: 0 1.35rem;
+            max-width: 40rem;
+            z-index: 1;
+            transition: all 0.45s ease;
+        }
+        .tns-nav-buttons {
+            display: none;
+            &:first-child, &:nth-child(2), &:nth-child(3) {
+                display: grid;
             }
         }
     }

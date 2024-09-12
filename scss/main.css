@@ -1309,10 +1309,11 @@ body {
   border: 1px solid #4d5765;
   border-radius: 10rem;
   padding: 1rem 2.75rem;
+  transition: 0.5s ease;
 }
 .popular_menu_tabs ul li a.active {
   background: #eb0029;
-  border: 2px solid #eb0029;
+  border: 1px solid #eb0029;
   color: #ffffff;
 }
 .popular_menu_slider {
@@ -1488,6 +1489,7 @@ body {
 
 .chefs {
   position: relative;
+  z-index: 999;
   overflow: hidden;
 }
 .chefs_wrapper {
@@ -2495,21 +2497,48 @@ body {
 }
 .about_banner_content {
   color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  padding-left: 3rem;
+  line-height: 4rem;
 }
 .about_banner_content a {
   color: #eb0029;
 }
 .about_banner_title {
   font-size: 3rem;
+  margin-top: 10rem;
 }
 .about_banner_title span {
   color: #ff9d2d;
 }
 .about_banner_location {
-  font-size: 1rem;
-  font-weight: lighter;
+  font-size: 1.3rem;
+}
+.about_banner_location h2 {
+  font-weight: 400;
+}
+.about_banner_location a {
+  margin-left: 1rem;
+}
+.about_banner_location span {
+  margin: 0 1rem;
+}
+@media screen and (min-width: 1080px) {
+  .about_banner_content {
+    margin-left: 18%;
+  }
 }
 
+.quality {
+  position: relative;
+}
+.quality .dog {
+  display: none;
+}
+.quality .pot {
+  display: none;
+}
 .quality_wrapper {
   display: flex;
   flex-direction: column;
@@ -2517,8 +2546,8 @@ body {
   margin: 0 auto;
   background: url(/img/estiva_img/about_line.png);
   background-repeat: no-repeat;
-  background-position: top;
-  background-position: center;
+  background-position-x: center;
+  background-position-y: 60rem;
   z-index: 0;
   top: -150px;
   left: 0;
@@ -2557,23 +2586,36 @@ body {
 }
 .quality_text_discover .discover_button {
   margin: 2.5rem 0;
-  padding: 1rem 2rem;
+  padding: 2rem 4rem;
   font-weight: 600;
 }
 .quality_text_discover .experience_information {
   display: flex;
-  gap: 2rem;
+  text-transform: uppercase;
+  align-items: center;
+  margin-left: 2rem;
+  gap: 5px;
 }
 .quality_text_discover .experience_information h1 {
   color: #eb0029;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 1;
+  font-family: Rubik;
 }
 .quality_text_discover .experience_information_text {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
 }
+.quality_text_discover .experience_information_text h2 {
+  font-size: 1.5rem;
+  font-weight: 300;
+}
 .quality_text_discover .experience_information_text p {
-  font-size: 1.75rem;
+  line-height: 1rem;
+  font-size: 1.5rem;
+  font-weight: 500;
 }
 .quality_content_img {
   display: flex;
@@ -2581,23 +2623,94 @@ body {
   align-items: center;
   position: relative;
 }
-.quality_content_img .image_about {
+.quality_content_img .content_img_overlay {
+  position: absolute;
+  top: -4rem;
+  left: 2rem;
+  z-index: 99;
+}
+.quality_content_img .content_img_overlay_text {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  top: 3rem;
+  left: 1rem;
+  color: #ffffff;
+}
+.quality_content_img .content_img_overlay_text h1 {
+  font-size: 3.5rem;
+}
+.quality_content_img .content_img_overlay_text .subtext h1, .quality_content_img .content_img_overlay_text .subtext p {
+  line-height: 1;
+}
+.quality_content_img .content_img_overlay_text .subtext h1 {
+  font-size: 1.8rem;
+}
+.quality_content_img .content_img_overlay_text .subtext p {
+  font-size: 1.3rem;
+}
+.quality_content_img .content_img_overlay img {
+  transform: rotate(90deg);
+}
+.quality .image_about {
   margin-top: -10rem;
   z-index: 2;
-  width: 90%;
+  width: 80%;
   position: absolute;
   rotate: 180deg;
   justify-content: end;
 }
-.quality_content_img .bg_about {
+.quality .bg_about {
   margin-top: -10rem;
   z-index: -1;
   left: 0;
-  width: 100%;
+  width: 90%;
   margin-right: -6rem;
   transform: scaleX(-1);
 }
 @media screen and (min-width: 1080px) {
+  .quality {
+    background: url(/img/estiva_img/about_line.png);
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: -15rem;
+  }
+  .quality .pot {
+    display: unset;
+    position: absolute;
+    right: -12rem;
+    bottom: 10rem;
+  }
+  .quality .dog {
+    display: unset;
+    position: absolute;
+    right: 130rem;
+    top: -3rem;
+  }
+  .quality .pot, .quality .dog {
+    animation: move_background 10s linear;
+    animation-iteration-count: infinite;
+  }
+  .quality .experience_information h1 {
+    font-size: 5rem;
+    padding-right: 2rem;
+  }
+  .quality .experience_information_text p {
+    font-size: 2rem;
+  }
+  .quality_wrapper {
+    display: flex;
+    flex-direction: column;
+    max-width: 130rem;
+    margin: 0 auto;
+    padding-top: 8rem;
+    background-image: none;
+    z-index: 0;
+    top: -150px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
   .quality .quality_text_content {
     padding-right: 8rem;
   }
@@ -2610,6 +2723,10 @@ body {
     justify-content: center;
     align-items: center;
     position: relative;
+  }
+  .quality .quality_content_img .content_img_overlay {
+    top: 1rem;
+    left: -9rem;
   }
   .quality .quality_content_img img {
     width: unset;
@@ -2707,22 +2824,59 @@ body {
 }
 
 .testimonial {
+  position: relative;
+  overflow: hidden;
   background: #faf7f2;
+  margin-top: -24rem;
+  margin-bottom: 20rem;
+}
+.testimonial_background {
+  background-image: url(/img/estiva_img/feature_bg_2.png);
+}
+.testimonial_overlay {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.testimonial_overlay .overlay_images {
+  display: flex;
+  justify-content: space-between;
+  animation: move_background 16s linear;
+  animation-iteration-count: infinite;
+}
+.testimonial_overlay .overlay_images:last-child {
+  margin-top: 12rem;
+  align-items: flex-end;
+  padding: 0 13rem;
+  animation-delay: 8s;
+}
+.testimonial_overlay .overlay_images img {
+  height: -moz-max-content;
+  height: max-content;
+  width: -moz-max-content;
+  width: max-content;
 }
 .testimonial_wrapper {
-  padding-top: 10rem;
-  background-image: url(/img/estiva_img/feature_bg_2.png);
+  position: relative;
+  padding-top: 30rem;
   background-size: cover;
   background-position: center;
   display: flex;
   flex-direction: column;
-  max-width: 130rem;
+  max-width: 120rem;
   margin: 0 auto;
+  z-index: 999;
+}
+.testimonial_wrapper_nav .tns-nav-buttons {
+  display: none;
+}
+.testimonial_wrapper_nav .tns-nav-buttons:first-child, .testimonial_wrapper_nav .tns-nav-buttons:nth-child(2), .testimonial_wrapper_nav .tns-nav-buttons:nth-child(3) {
+  display: grid;
 }
 .testimonial_text {
   padding-left: 1rem;
-  padding-right: 5rem;
-  padding-bottom: 10rem;
+  padding-bottom: 1rem;
 }
 .testimonial_text .testimonial_title {
   display: flex;
@@ -2739,12 +2893,17 @@ body {
 .testimonial_text_content p {
   color: rgba(0, 0, 0, 0.7);
   margin: 2rem 0;
+  font-size: 1.5rem;
+}
+.testimonial_sliders {
+  display: flex;
+  flex-direction: row;
+  width: -moz-max-content;
+  width: max-content;
+  gap: 1rem;
 }
 .testimonial_slider {
   width: 100%;
-}
-.testimonial_slider_content {
-  padding: 3rem;
 }
 .testimonial_slider_tab {
   background-color: white;
@@ -2753,12 +2912,16 @@ body {
   max-width: 38rem;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  padding: 3.5rem;
+  margin-bottom: 10rem;
 }
 .testimonial_slider_rating ul {
   display: flex;
   flex-direction: row;
+  margin: 3rem 0;
+}
+.testimonial_slider_rating ul i {
+  text-shadow: 1px 1px #212529, 1px 1px #212529, 0.1em 0.1em 0.1em rgba(0, 0, 0, 0.2);
 }
 .testimonial_slider_bottom {
   display: flex;
@@ -2766,6 +2929,60 @@ body {
 }
 .testimonial_slider_bottom img {
   border-radius: 100%;
+  margin-right: 1rem;
+  width: -moz-max-content;
+  width: max-content;
+  height: -moz-max-content;
+  height: max-content;
+}
+.testimonial_slider_info h2 {
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+.testimonial .tns-controls {
+  display: flex;
+  position: absolute;
+  top: 35rem;
+  right: 0;
+  gap: 1rem;
+}
+.testimonial .tns-controls button {
+  border: none;
+  border-radius: 100%;
+  height: 6rem;
+  width: 6rem;
+  font-size: 2rem;
+  color: #eb0029;
+  background: #ffffff;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  transition: 0.5s ease;
+}
+.testimonial .tns-controls button:hover {
+  color: #ffffff;
+  background: #eb0029;
+}
+@media screen and (min-width: 1080px) {
+  .testimonial_overlay {
+    display: block;
+  }
+  .testimonial_text {
+    max-width: 60rem;
+  }
+  .testimonial_slider {
+    position: relative;
+    display: inline-block;
+    margin: 0;
+    padding: 0 1.35rem;
+    max-width: 40rem;
+    z-index: 1;
+    transition: all 0.45s ease;
+  }
+  .testimonial .tns-nav-buttons {
+    display: none;
+  }
+  .testimonial .tns-nav-buttons:first-child, .testimonial .tns-nav-buttons:nth-child(2), .testimonial .tns-nav-buttons:nth-child(3) {
+    display: grid;
+  }
 }
 
 .lb__diner_container {
